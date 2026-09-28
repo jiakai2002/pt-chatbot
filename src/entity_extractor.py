@@ -1,6 +1,7 @@
-"""spaCy EntityRuler plus simple rules for normalized fitness entities."""
+"""Fitness entity extraction using a custom spaCy NER model and fallbacks."""
 
 import re
+from pathlib import Path
 
 try:
     import spacy
@@ -52,6 +53,15 @@ def _build_nlp():
 
 
 NLP = _build_nlp()
+NER_MODEL_PATH = Path(__file__).resolve().parent.parent / "models" / "ner" / "fitness_ner"
+TRAINED_NER = None
+
+
+def _load_trained_ner():
+    global TRAINED_NER
+    if TRAINED_NER is None and spacy is not None and (NER_MODEL_PATH / "config.cfg").exists():
+        TRAINED_NER = spacy.load(NER_MODEL_PATH)
+    return TRAINED_NER
 
 
 def _rule_entities(text: str) -> dict:
@@ -64,13 +74,31 @@ def _rule_entities(text: str) -> dict:
     return entities
 
 
+def _normalise_entity(label: str, value: str):
+    """Map a model span back to the same values used by the profile system."""
+    key = label.lower()
+    value = value.lower().strip()
+    aliases = ENTITY_ALIASES.get(key, {})
+    for normalized, variants in aliases.items():
+        if value in variants or value == normalized:
+            return key, normalized
+    return key, value
+
+
 def extract_entities(message: str) -> dict:
     text = message.lower().strip()
     entities = _rule_entities(text)
-    if NLP is not None:
+    model = _load_trained_ner()
+    if model is not None:
+        doc = model(text)
+        for ent in doc.ents:
+            label, value = _normalise_entity(ent.label_, ent.text)
+            entities[label] = value
+    elif NLP is not None:
         doc = NLP(text)
         for ent in doc.ents:
-            entities[ent.label_.lower()] = ent.ent_id_ or ent.text
+            label, value = _normalise_entity(ent.label_, ent.ent_id_ or ent.text)
+            entities[label] = value
 
     days = re.search(r"\b([1-7])[- ]*(?:day|days)\b", text)
     if days:

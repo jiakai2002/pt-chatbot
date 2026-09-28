@@ -5,8 +5,9 @@ __pycache__/
 venv/
 models/*
 !models/intent_classifier/.gitkeep
+!models/ner/
+!models/ner/fitness_ner/
 data/user_profiles/*
 !data/user_profiles/.gitkeep
 .streamlit/secrets.toml
 .ipynb_checkpoints/
-

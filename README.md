@@ -8,6 +8,7 @@ The chatbot is intended for general education only. It does not diagnose injurie
 
 - Intent classification for workout plans, exercise recommendations, exercise form, nutrition, progress logging, motivation, and out-of-scope queries.
 - Rule-based entity extraction using spaCy's EntityRuler and regular expressions.
+- Custom spaCy NER training pipeline with labelled fitness entity data.
 - Extraction of exercises, body parts, equipment, goals, experience level, duration, sets, repetitions, and injury indicators.
 - Simple in-session user profile for goals, experience level, equipment, training days, and session duration.
 - Local exercise knowledge base stored in JSON.
@@ -63,6 +64,9 @@ The application uses local models and local data at runtime. No external generat
 │   ├── train_intent.py            # Train classical baseline
 │   ├── train_intent_distilbert.py # Fine-tune DistilBERT
 │   ├── evaluate_distilbert.py     # Evaluate saved DistilBERT model
+│   ├── prepare_ner_data.py        # Create labelled NER JSONL data
+│   ├── train_ner.py               # Train custom spaCy NER
+│   ├── evaluate_ner.py            # Evaluate custom spaCy NER
 │   ├── test_entities.py           # Entity extraction checks
 │   ├── test_rag.py                # Retrieval checks
 │   └── test_chatbot.py            # End-to-end smoke tests
@@ -131,6 +135,30 @@ python -m scripts.evaluate_distilbert
 ```
 
 The trained model files are intentionally excluded from Git through `.gitignore`. This keeps the repository lightweight and avoids committing the approximately 268 MB local model artefacts.
+
+## Training the custom NER model
+
+The NER data is generated from the existing fitness sentences using the current entity dictionary as weak supervision. The generated JSONL files should be manually reviewed and corrected before being used as a final gold-standard dataset.
+
+Prepare the labelled NER data:
+
+```powershell
+python -m scripts.prepare_ner_data
+```
+
+Train the custom spaCy NER model from a blank English pipeline:
+
+```powershell
+python -m scripts.train_ner
+```
+
+Evaluate it on the held-out NER test split:
+
+```powershell
+python -m scripts.evaluate_ner
+```
+
+The Streamlit application automatically loads `models/ner/fitness_ner/` when it exists. If it is unavailable, it falls back to the existing EntityRuler and regular-expression extraction.
 
 ## Testing
 
