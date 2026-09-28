@@ -1,0 +1,12 @@
+.env
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+models/*
+!models/intent_classifier/.gitkeep
+data/user_profiles/*
+!data/user_profiles/.gitkeep
+.streamlit/secrets.toml
+.ipynb_checkpoints/
+
