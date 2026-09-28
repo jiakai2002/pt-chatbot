@@ -14,4 +14,4 @@ The source dataset is MIT licensed. Its labels are mapped to this project's inte
 
 ## data_v2 processing
 
-data_v2 is a relabelled copy of the original data. Existing source rows and wording are preserved; no synthetic augmentation has been added at this stage. The original files under data/ remain unchanged.
+The data_v2 intent files contain original and HF examples plus deterministic synthetic template examples. Synthetic rows are marked `augmented_template`. Entity labels are generated from versioned fitness lexicons and structured regex patterns, with conflicts recorded in `entity_conflicts.csv`. The original files under data/ remain unchanged.

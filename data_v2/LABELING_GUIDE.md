@@ -173,5 +173,7 @@ The current schema contains:
 - `EXPERIENCE_LEVEL`: beginner, intermediate, advanced
 - `DURATION`: 20 minutes, half an hour
 - `DAYS`: three days a week, Monday/Wednesday/Friday
+- `FOOD`: oats, eggs, tofu, rice
+- `MEAL_TIME`: breakfast, lunch, post-workout, rest day
 
 Entity spans use zero-based character offsets with an end-exclusive end index. Spans must match the exact text, must not overlap, and must use only the allowed label names.

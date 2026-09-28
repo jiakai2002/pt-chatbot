@@ -1,0 +1,9 @@
+after training
+before training
+breakfast
+dinner
+lunch
+post-workout
+pre-workout
+rest day
+snack

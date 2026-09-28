@@ -1,411 +1,1611 @@
-text,intent,secondary_intent
-Make me a workout plan,generate_plan,
-I need a three day training plan,generate_plan,
-Can you create a beginner routine,generate_plan,
-Plan my workouts for this week,generate_plan,
-Give me a strength program,generate_plan,
-What should I train over three days,generate_plan,
-I want a simple gym program,generate_plan,
-Create a bodyweight workout schedule,generate_plan,
-What are the best exercises for chest,find_exercise,
-Recommend a chest workout,find_exercise,
-Recommend a workout for my back,find_exercise,
-Recommend exercises for stronger legs,find_exercise,
-What exercises can I do with dumbbells,find_exercise,
-Show me some back exercises,find_exercise,
-Which exercise targets my core,find_exercise,
-Suggest an exercise for glutes,find_exercise,
-What can I do to train my shoulders,find_exercise,
-Give me exercises for beginners,find_exercise,
-How do I perform a squat,ask_form,
-What is the proper push-up technique,ask_form,
-How should I do a plank,ask_form,
-Explain deadlift form,ask_form,
-How do I do lunges correctly,ask_form,
-What is good bench press form,ask_form,
-How should my knees move during a squat,ask_form,
-Teach me the correct way to exercise,ask_form,
-What should I eat to build muscle,get_nutrition,
-How much protein should I eat,get_nutrition,
-Give me basic nutrition advice,get_nutrition,
-What foods help with weight loss,get_nutrition,
-What should I eat before training,get_nutrition,
-Tell me about calories and exercise,get_nutrition,
-What is a good diet for endurance,get_nutrition,
-Can you suggest healthy meals,get_nutrition,
-I completed my workout,log_progress,
-I did three sets of squats,log_progress,
-Log my bench press today,log_progress,
-I finished a five kilometer run,log_progress,
-I want to record my progress,log_progress,
-Today I did push-ups,log_progress,
-I trained legs yesterday,log_progress,
-Record that I lifted weights,log_progress,
-I feel unmotivated,motivation,
-Give me some encouragement,motivation,
-I do not feel like exercising,motivation,
-Motivate me to work out,motivation,
-I am losing motivation,motivation,
-Can you help me stay consistent,motivation,
-I need a little fitness inspiration,motivation,
-Hello fitness coach,motivation,
-I have sharp knee pain,medical_or_injury,
-Can you diagnose my shoulder injury,medical_or_injury,
-What medicine should I take for pain,medical_or_injury,
-Give me unrelated travel advice,out_of_scope,
-I think I broke my ankle,out_of_scope,
-Tell me how to treat a medical condition,medical_or_injury,
-How do I hack an account,out_of_scope,
-Can you replace my doctor,medical_or_injury,
-Cardio always feels like such a repetitive grind to me.,motivation,
-Make me a 20-minute workout plan that I can do during my lunch break.,generate_plan,
-What are the main nutritional benefits of eating spinach?,get_nutrition,
-That healthy and clean meal made me feel great and not sluggish.,log_progress,
-What are some of the best foods rich in iron?,get_nutrition,
-Create a meal plan for a pescatarian diet.,generate_plan,
-I'm feeling the after-effects of a poor night's sleep.,log_progress,
-I'm trying to listen to my body's signals more often.,motivation,
-That was a perfect workout to end the week.,log_progress,
-What are the main ingredients of a good curry?,out_of_scope,
-What are some foods that are said to boost metabolism?,get_nutrition,
-Tell me about the Cold War.,out_of_scope,
-I think progress isn't always linear.,motivation,
-That deep tissue massage left me feeling amazing.,log_progress,
-What is the nutritional value of maca powder?,get_nutrition,
-What are some good exercises for tennis elbow?,find_exercise,
-My workout today was a fantastic stress reliever.,log_progress,
-Can you design a push/pull/legs workout split?,generate_plan,
-I honestly think consistency is the most important thing.,motivation,
-Find a video on foam rolling techniques for legs.,find_exercise,
-What is proprioception and how do I train it?,find_exercise,
-"I'm feeling really balanced, both mentally and physically.",log_progress,
-I feel a great sense of personal accomplishment today.,log_progress,
-I want a yoga routine plan for stress relief over a month.,generate_plan,
-Tell me about the benefits of eating beets.,get_nutrition,
-What's the best way to learn photography?,out_of_scope,
-Generate a nutrition plan for someone who works night shifts.,generate_plan,
-That's good to know.,motivation,
-How to properly execute a lat pulldown to target the lats.,find_exercise,
-What are some common nutrient deficiencies in a vegan diet?,get_nutrition,
-Create a meal plan for someone who hates cooking.,generate_plan,
-What is the process of photosynthesis?,out_of_scope,
-What are your thoughts on the trend of barefoot running?,motivation,
-Show me how to use a TRX for inverted rows.,find_exercise,
-Tell me about the benefits of eating garlic.,get_nutrition,
-Design a simple 2-day-a-week lifting program for maintenance.,generate_plan,
-What is the tallest building in the entire world?,out_of_scope,
-I need a sample meal plan for someone with PCOS.,generate_plan,
-I'm feeling very lethargic.,log_progress,
-Can you tell me a funny joke?,out_of_scope,
-Nutritional facts for an Impossible Burger.,get_nutrition,
-What's a good finisher for a chest workout?,find_exercise,
-It's amazing how much my diet really affects my overall mood.,motivation,
-I want a dedicated plan to build powerful core strength.,generate_plan,
-How many calories are in a samosa?,get_nutrition,
-What's your opinion on wearing weightlifting shoes?,motivation,
-My elbow is bothering me again.,log_progress,
-Create a training plan to improve my 1-mile run time.,generate_plan,
-How to do a Russian twist with a weight.,find_exercise,
-Is it better to eat a meal before or after a workout?,get_nutrition,
-My stamina was great on my bike ride this weekend.,log_progress,
-Generate a workout schedule for a rotating shift worker.,generate_plan,
-Can you recommend a good history podcast to listen to?,out_of_scope,
-What's a burpee and how do I do it with correct form?,find_exercise,
-Tell me about the nutritional profile of asparagus.,get_nutrition,
-I'm feeling a little impatient with my weight loss results.,log_progress,
-Who was the famous Renaissance artist Leonardo da Vinci?,out_of_scope,
-Who directed the movie 'Inception' starring Leonardo DiCaprio?,out_of_scope,
-Design a technical routine for improving my deadlift form.,generate_plan,
-I want a plan to transition to a fully vegetarian diet.,generate_plan,
-I feel accomplished for waking up early to exercise before work.,log_progress,
-I want a diet plan that's easy on my stomach.,generate_plan,
-What is the Pythagorean theorem used for?,out_of_scope,
-How do I take care of a new puppy?,out_of_scope,
-What are some common signs of being vitamin D deficient?,get_nutrition,
-How do you make a perfect cup of English breakfast tea?,out_of_scope,
-What are the benefits of taking zinc supplements?,get_nutrition,
-How many calories are in a shot of vodka?,get_nutrition,
-I'm grateful for your help on this journey.,motivation,
-How important is getting enough sleep for muscle recovery?,motivation,
-Find a guide on how to build an athletic stance for sports.,find_exercise,
-Design a nutrition plan for someone with an iron deficiency.,generate_plan,
-Show me some advanced push-up variations like the archer push-up.,find_exercise,
-Is it better to do my cardio session before or after lifting weights?,motivation,
-Can you make a 7-day vegan meal plan for weight loss?,generate_plan,
-What are isometric exercises and what are they good for?,find_exercise,
-I feel like I'm hitting a plateau.,log_progress,
-I’m not sure if I should focus on building strength or improving my endurance first.,motivation,
-My body feels completely and utterly exhausted.,log_progress,
-I had no idea there were so many different types of protein powder.,motivation,
-How to change my car's oil.,out_of_scope,
-Feeling mentally clear and calm after my morning meditation.,log_progress,
-Design a workout routine using only a pull-up bar and the floor.,generate_plan,
-Generate a workout plan using a TRX suspension trainer.,generate_plan,
-What do you think about body positivity in the fitness world?,motivation,
-What is the difference between aerobic and anaerobic exercise?,find_exercise,
-How to do a Jefferson curl for hamstring flexibility.,find_exercise,
-I'm trying to cut down on added sugar in my diet.,motivation,
-Show me a quick 5-minute warm-up before a run.,find_exercise,
-What is the significance of the Great Wall of China?,out_of_scope,
-"I'm so stressed out from work, I really need a good workout.",log_progress,
-Who wrote the US Constitution?,out_of_scope,
-How to do a wall sit correctly for quad endurance.,find_exercise,
-How many calories are in a large Caesar salad with dressing?,get_nutrition,
-I want a plan to increase my daily water intake.,generate_plan,
-How to do a landmine press.,find_exercise,
-My focus was amazing during my lifting session this afternoon.,log_progress,
-What's your opinion on using smelling salts before a heavy lift?,motivation,
-What’s the protein content in 200g of salmon?,get_nutrition,
-How to do a concentration curl correctly.,find_exercise,
-How many calories are in a tablespoon of honey?,get_nutrition,
-Are chia seeds a superfood?,get_nutrition,
-What is EMOM in CrossFit?,find_exercise,
-I'm feeling really on top of my game in every aspect.,log_progress,
-"Okay, that makes a whole lot more sense now.",motivation,
-What's the difference between high-bar and low-bar squats in powerlifting?,find_exercise,
-What's the best way to clean a cast iron skillet?,out_of_scope,
-I felt really energized during my run this morning.,log_progress,
-Who was Albert Einstein?,out_of_scope,
-What are some good vegan protein sources besides tofu?,get_nutrition,
-"Got it, thanks for all the useful info.",motivation,
-Is kombucha really good for you?,get_nutrition,
-That's a really interesting way to think about my weekly nutrition.,motivation,
-What do you think about those '30-day shred' programs?,motivation,
-What's the difference between a republic and a democracy?,out_of_scope,
-Who wrote the classic American novel 'To Kill a Mockingbird'?,out_of_scope,
-What's the best laptop for a college student?,out_of_scope,
-My endurance on the treadmill is definitely improving week by week.,log_progress,
-Design a High-Intensity Interval Training (HIIT) program for fat loss.,generate_plan,
-Show me a 20-minute HIIT workout for beginners.,find_exercise,
-How do I keep my back safe during a deadlift?,ask_form,
-What is the correct squat depth?,ask_form,
-Can you explain push-up hand placement?,ask_form,
-How do I brace my core during exercise?,ask_form,
-What is the right way to do a bodyweight lunge?,ask_form,
-How should I breathe during a bench press?,ask_form,
-How do I avoid rounding my back when lifting?,ask_form,
-Can you explain plank alignment?,ask_form,
-What should my feet do during a squat?,ask_form,
-How do I perform a dumbbell row?,ask_form,
-What is the correct setup for a shoulder press?,ask_form,
-How can I improve my push-up form?,ask_form,
-How do I safely start doing deadlifts?,ask_form,
-Where should my elbows be during a push-up?,ask_form,
-How do I perform a glute bridge correctly?,ask_form,
-Can you give me form tips for lunges?,ask_form,
-What are common mistakes in a plank?,ask_form,
-How do I set up for a barbell squat?,ask_form,
-How should I land during a jump squat?,ask_form,
-Can you explain neutral spine during training?,ask_form,
-How do I do a row without swinging?,ask_form,
-What is the safest way to start strength training?,ask_form,
-Build me a four week beginner workout plan,generate_plan,
-Can you organize my workouts for three days each week,generate_plan,
-Create a home routine for building strength,generate_plan,
-I need a simple plan for losing weight,generate_plan,
-Make a weekly program with rest days,generate_plan,
-Design a routine for someone new to the gym,generate_plan,
-Give me a full body training schedule,generate_plan,
-Can you plan workouts around my dumbbells,generate_plan,
-I want a program for improving my endurance,generate_plan,
-Create a short workout plan for busy days,generate_plan,
-What should my first week of training look like,generate_plan,
-Make a strength routine with bodyweight exercises,generate_plan,
-Plan my workouts around three available days,generate_plan,
-Can you create a simple muscle building routine,generate_plan,
-Give me a beginner home workout schedule,generate_plan,
-I need a routine that fits into 30 minutes,generate_plan,
-Create a plan for training my whole body,generate_plan,
-How should I structure my weekly workouts,generate_plan,
-Make a low equipment fitness program,generate_plan,
-Can you build a routine for getting stronger,generate_plan,
-What are good exercises for the upper body,find_exercise,
-Which exercises work the glutes best,find_exercise,
-Suggest simple exercises for a new lifter,find_exercise,
-What can I do instead of a barbell squat,find_exercise,
-Which movements train the hamstrings,find_exercise,
-Recommend exercises I can do at home,find_exercise,
-What are effective exercises for my arms,find_exercise,
-Show me beginner exercises for the core,find_exercise,
-Which exercises target the shoulders,find_exercise,
-What are good bodyweight leg exercises,find_exercise,
-Can you suggest exercises for a stronger back,find_exercise,
-What should I do to train my chest at home,find_exercise,
-Which exercises use a kettlebell,find_exercise,
-Recommend movements for improving stamina,find_exercise,
-What exercises can replace a push-up,find_exercise,
-Show me some beginner glute exercises,find_exercise,
-What exercises help with general fitness,find_exercise,
-Which exercises can I do with resistance bands,find_exercise,
-Suggest a few compound exercises,find_exercise,
-What are safe exercises for a beginner,find_exercise,
-How should I position my feet for lunges,ask_form,
-Can you walk me through a proper deadlift,ask_form,
-What should I do with my hips during a squat,ask_form,
-How do I keep my wrists straight in a push-up,ask_form,
-What is the correct plank duration for a beginner,ask_form,
-How do I control the lowering phase of an exercise,ask_form,
-Can you explain safe bench press technique,ask_form,
-How should I hold dumbbells during a row,ask_form,
-What does good lunge posture look like,ask_form,
-How do I keep my shoulders safe during pressing,ask_form,
-Can you explain how to breathe during squats,ask_form,
-How do I stop my knees from caving in,ask_form,
-What is the proper starting position for a row,ask_form,
-How should my back feel during a hip hinge,ask_form,
-Can you describe correct shoulder press form,ask_form,
-How do I modify a push-up while learning form,ask_form,
-What should I avoid when doing a deadlift,ask_form,
-How do I keep my neck neutral during a plank,ask_form,
-Can you explain the movement pattern of a squat,ask_form,
-What is the correct tempo for a beginner exercise,ask_form,
-How can I get enough protein from food,get_nutrition,
-What is a balanced meal for someone who trains,get_nutrition,
-What should I eat on a rest day,get_nutrition,
-How can nutrition support strength training,get_nutrition,
-What are healthy sources of carbohydrates,get_nutrition,
-How much water should I drink around workouts,get_nutrition,
-What is a simple meal after exercise,get_nutrition,
-What foods are high in protein,get_nutrition,
-How do I eat for better endurance,get_nutrition,
-Can you explain the role of calories in fitness,get_nutrition,
-What are nutritious snacks before training,get_nutrition,
-How can I lose weight without skipping meals,get_nutrition,
-What should a beginner know about sports nutrition,get_nutrition,
-How do I build a healthy plate,get_nutrition,
-What should I eat when trying to gain muscle,get_nutrition,
-Are vegetables important for workout recovery,get_nutrition,
-How can I make my diet more consistent,get_nutrition,
-What is a good breakfast before exercise,get_nutrition,
-Can you give general advice for eating around training,get_nutrition,
-What nutrients support recovery after exercise,get_nutrition,
-I completed four sets of rows today,log_progress,
-Please record that I trained my legs,log_progress,
-I walked for 30 minutes this morning,log_progress,
-I finished my strength session,log_progress,
-Today I completed my planned workout,log_progress,
-I ran two kilometers and want to log it,log_progress,
-I did ten push-ups in my workout,log_progress,
-I want to track my training this week,log_progress,
-I completed a dumbbell workout,log_progress,
-Log a 45 minute cardio session,log_progress,
-I finished my first gym session,log_progress,
-I trained chest and shoulders today,log_progress,
-Please record my progress from today,log_progress,
-I did three rounds of my circuit,log_progress,
-I completed my beginner routine,log_progress,
-I want to note that I exercised today,log_progress,
-I lifted weights for the first time,log_progress,
-I finished a bodyweight workout,log_progress,
-Record my workout as completed,log_progress,
-I trained for an hour today,log_progress,
-I need encouragement to start exercising,motivation,
-I have been struggling to stay consistent,motivation,
-Can you help me get back into training,motivation,
-I skipped my workout and feel discouraged,motivation,
-Give me a reason to go for a walk,motivation,
-I want to build a better exercise habit,motivation,
-How can I stay motivated this week,motivation,
-I feel nervous about starting at the gym,motivation,
-Please encourage me before my workout,motivation,
-I am having trouble staying active,motivation,
-Give me a simple fitness pep talk,motivation,
-I need help getting started today,motivation,
-Exercise feels difficult to maintain,motivation,
-I want to become more consistent,motivation,
-Can you help me overcome workout procrastination,motivation,
-I feel discouraged by slow progress,motivation,
-Remind me why small workouts matter,motivation,
-I need support to finish my session,motivation,
-How do I make exercise a habit,motivation,
-I am not feeling confident about training,motivation,
-Can you tell me what medication treats my back pain,medical_or_injury,
-I have a serious injury and need a diagnosis,medical_or_injury,
-Should I exercise with chest pain,medical_or_injury,
-What treatment should I use for a torn muscle,medical_or_injury,
-Can you interpret my medical scan,medical_or_injury,
-I am experiencing sudden severe pain,medical_or_injury,
-Tell me whether my symptoms are dangerous,medical_or_injury,
-What prescription should I take for recovery,out_of_scope,
-Can you replace advice from my doctor,medical_or_injury,
-I think I dislocated my shoulder,medical_or_injury,
-Is this exercise safe with my medical condition,medical_or_injury,
-How should I treat a possible fracture,medical_or_injury,
-I have numbness during my workout,medical_or_injury,
-Can you diagnose why my knee is swollen,medical_or_injury,
-What should I do about persistent pain,medical_or_injury,
-I need medical advice about exercising,medical_or_injury,
-Can you tell me if I have an illness,medical_or_injury,
-My ankle is badly injured after training,medical_or_injury,
-Should I ignore pain while lifting,medical_or_injury,
-What medicine will heal my sports injury,medical_or_injury,
-Create a routine for three beginner workouts,generate_plan,
-Plan a week of training with two rest days,generate_plan,
-I need a simple plan for home strength training,generate_plan,
-Make me a routine focused on general fitness,generate_plan,
-Build a program using only bodyweight movements,generate_plan,
-How should I organize my first month of exercise,generate_plan,
-Give me a short plan for improving stamina,generate_plan,
-Create a workout schedule that fits my busy week,generate_plan,
-I want a beginner plan for gaining strength,generate_plan,
-Can you design a low impact weekly routine,generate_plan,
-What are some exercises for stronger hamstrings,find_exercise,
-Which movements can build my chest,find_exercise,
-Suggest exercises for a home leg workout,find_exercise,
-What can I do to train my upper back,find_exercise,
-What exercises are suitable for weak beginners,find_exercise,
-Recommend movements that use no equipment,find_exercise,
-Which exercises work the triceps,find_exercise,
-Show me exercises for improving balance,find_exercise,
-What are good exercises for a full body session,find_exercise,
-Suggest movements for a dumbbell workout,find_exercise,
-How do I perform a squat without hurting my knees,ask_form,
-Can you explain how to start a deadlift,ask_form,
-How should I align my body in a push-up,ask_form,
-What is the correct way to hold a plank,ask_form,
-How do I keep my chest up during a lunge,ask_form,
-Can you explain safe dumbbell row technique,ask_form,
-Where should I place my feet for a deadlift,ask_form,
-How do I control my breathing during lifting,ask_form,
-What are the main form cues for a bench press,ask_form,
-How can I avoid swinging during a curl,ask_form,
-What are easy high protein foods,get_nutrition,
-How should I eat on training days,get_nutrition,
-What is a healthy snack after exercise,get_nutrition,
-How can I fuel a long workout,get_nutrition,
-What foods help support muscle recovery,get_nutrition,
-How do I plan balanced meals for fitness,get_nutrition,
-What should I drink during exercise,get_nutrition,
-How can I reduce calories sensibly,get_nutrition,
-What are good plant based protein sources,get_nutrition,
-Can you explain nutrition for beginners,get_nutrition,
-I finished a chest workout today,log_progress,
-Please log my 20 minute walk,log_progress,
-I completed two rounds of my exercises,log_progress,
-I trained my back this afternoon,log_progress,
-Record that I did a beginner workout,log_progress,
-I finished my planned session,log_progress,
-I want to note that I ran this morning,log_progress,
-I completed my strength training for today,log_progress,
-Log my workout as four sets of squats,log_progress,
-I exercised for 30 minutes today,log_progress,
-I need motivation to return after a break,motivation,
-I am finding it hard to begin my workout,motivation,
-Please give me encouragement for today,motivation,
-I want to stay active even when I am busy,motivation,
-How can I stop giving up on exercise,motivation,
-I feel frustrated with my progress,motivation,
-Help me make exercise feel manageable,motivation,
-I need a small push to train,motivation,
-Can you encourage me to take a walk,motivation,
-I want to feel more confident at the gym,motivation,
-Should I take painkillers for my workout injury,medical_or_injury,
-I have swelling after exercise and need a diagnosis,medical_or_injury,
-Can you tell me what is wrong with my back,out_of_scope,
-Is it safe to train with a suspected fracture,medical_or_injury,
-What treatment should I use for severe knee pain,medical_or_injury,
-I feel dizzy and unwell while exercising,medical_or_injury,
-Can you prescribe something for muscle pain,medical_or_injury,
-I have a medical condition and need exercise clearance,medical_or_injury,
-Should I continue lifting with numbness,medical_or_injury,
-Can you interpret my injury symptoms,medical_or_injury,
+text,intent,secondary_intent,source
+Make me a workout plan,generate_plan,,original
+I need a three day training plan,generate_plan,,original
+Can you create a beginner routine,generate_plan,,original
+Plan my workouts for this week,generate_plan,,original
+Give me a strength program,generate_plan,,original
+What should I train over three days,generate_plan,,original
+I want a simple gym program,generate_plan,,original
+Create a bodyweight workout schedule,generate_plan,,original
+What are the best exercises for chest,find_exercise,,original
+Recommend a chest workout,find_exercise,,original
+Recommend a workout for my back,find_exercise,,original
+Recommend exercises for stronger legs,find_exercise,,original
+What exercises can I do with dumbbells,find_exercise,,original
+Show me some back exercises,find_exercise,,original
+Which exercise targets my core,find_exercise,,original
+Suggest an exercise for glutes,find_exercise,,original
+What can I do to train my shoulders,find_exercise,,original
+Give me exercises for beginners,find_exercise,,original
+How do I perform a squat,ask_form,,original
+What is the proper push-up technique,ask_form,,original
+How should I do a plank,ask_form,,original
+Explain deadlift form,ask_form,,original
+How do I do lunges correctly,ask_form,,original
+What is good bench press form,ask_form,,original
+How should my knees move during a squat,ask_form,,original
+Teach me the correct way to exercise,ask_form,,original
+What should I eat to build muscle,get_nutrition,,original
+How much protein should I eat,get_nutrition,,original
+Give me basic nutrition advice,get_nutrition,,original
+What foods help with weight loss,get_nutrition,,original
+What should I eat before training,get_nutrition,,original
+Tell me about calories and exercise,get_nutrition,,original
+What is a good diet for endurance,get_nutrition,,original
+Can you suggest healthy meals,get_nutrition,,original
+I completed my workout,log_progress,,original
+I did three sets of squats,log_progress,,original
+Log my bench press today,log_progress,,original
+I finished a five kilometer run,log_progress,,original
+I want to record my progress,log_progress,,original
+Today I did push-ups,log_progress,,original
+I trained legs yesterday,log_progress,,original
+Record that I lifted weights,log_progress,,original
+I feel unmotivated,motivation,,original
+Give me some encouragement,motivation,,original
+I do not feel like exercising,motivation,,original
+Motivate me to work out,motivation,,original
+I am losing motivation,motivation,,original
+Can you help me stay consistent,motivation,,original
+I need a little fitness inspiration,motivation,,original
+Hello fitness coach,motivation,,original
+I have sharp knee pain,medical_or_injury,,original
+Can you diagnose my shoulder injury,medical_or_injury,,original
+What medicine should I take for pain,medical_or_injury,,original
+Give me unrelated travel advice,out_of_scope,,original
+I think I broke my ankle,out_of_scope,,original
+Tell me how to treat a medical condition,medical_or_injury,,original
+How do I hack an account,out_of_scope,,original
+Can you replace my doctor,medical_or_injury,,original
+Cardio always feels like such a repetitive grind to me.,motivation,,hf
+Make me a 20-minute workout plan that I can do during my lunch break.,generate_plan,,hf
+What are the main nutritional benefits of eating spinach?,get_nutrition,,hf
+That healthy and clean meal made me feel great and not sluggish.,log_progress,,hf
+What are some of the best foods rich in iron?,get_nutrition,,hf
+Create a meal plan for a pescatarian diet.,generate_plan,,hf
+I'm feeling the after-effects of a poor night's sleep.,log_progress,,hf
+I'm trying to listen to my body's signals more often.,motivation,,hf
+That was a perfect workout to end the week.,log_progress,,hf
+What are the main ingredients of a good curry?,out_of_scope,,hf
+What are some foods that are said to boost metabolism?,get_nutrition,,hf
+Tell me about the Cold War.,out_of_scope,,hf
+I think progress isn't always linear.,motivation,,hf
+That deep tissue massage left me feeling amazing.,log_progress,,hf
+What is the nutritional value of maca powder?,get_nutrition,,hf
+What are some good exercises for tennis elbow?,find_exercise,,hf
+My workout today was a fantastic stress reliever.,log_progress,,hf
+Can you design a push/pull/legs workout split?,generate_plan,,hf
+I honestly think consistency is the most important thing.,motivation,,hf
+Find a video on foam rolling techniques for legs.,find_exercise,,hf
+What is proprioception and how do I train it?,find_exercise,,hf
+"I'm feeling really balanced, both mentally and physically.",log_progress,,hf
+I feel a great sense of personal accomplishment today.,log_progress,,hf
+I want a yoga routine plan for stress relief over a month.,generate_plan,,hf
+Tell me about the benefits of eating beets.,get_nutrition,,hf
+What's the best way to learn photography?,out_of_scope,,hf
+Generate a nutrition plan for someone who works night shifts.,generate_plan,,hf
+That's good to know.,motivation,,hf
+How to properly execute a lat pulldown to target the lats.,find_exercise,,hf
+What are some common nutrient deficiencies in a vegan diet?,get_nutrition,,hf
+Create a meal plan for someone who hates cooking.,generate_plan,,hf
+What is the process of photosynthesis?,out_of_scope,,hf
+What are your thoughts on the trend of barefoot running?,motivation,,hf
+Show me how to use a TRX for inverted rows.,find_exercise,,hf
+Tell me about the benefits of eating garlic.,get_nutrition,,hf
+Design a simple 2-day-a-week lifting program for maintenance.,generate_plan,,hf
+What is the tallest building in the entire world?,out_of_scope,,hf
+I need a sample meal plan for someone with PCOS.,generate_plan,,hf
+I'm feeling very lethargic.,log_progress,,hf
+Can you tell me a funny joke?,out_of_scope,,hf
+Nutritional facts for an Impossible Burger.,get_nutrition,,hf
+What's a good finisher for a chest workout?,find_exercise,,hf
+It's amazing how much my diet really affects my overall mood.,motivation,,hf
+I want a dedicated plan to build powerful core strength.,generate_plan,,hf
+How many calories are in a samosa?,get_nutrition,,hf
+What's your opinion on wearing weightlifting shoes?,motivation,,hf
+My elbow is bothering me again.,log_progress,,hf
+Create a training plan to improve my 1-mile run time.,generate_plan,,hf
+How to do a Russian twist with a weight.,find_exercise,,hf
+Is it better to eat a meal before or after a workout?,get_nutrition,,hf
+My stamina was great on my bike ride this weekend.,log_progress,,hf
+Generate a workout schedule for a rotating shift worker.,generate_plan,,hf
+Can you recommend a good history podcast to listen to?,out_of_scope,,hf
+What's a burpee and how do I do it with correct form?,find_exercise,,hf
+Tell me about the nutritional profile of asparagus.,get_nutrition,,hf
+I'm feeling a little impatient with my weight loss results.,log_progress,,hf
+Who was the famous Renaissance artist Leonardo da Vinci?,out_of_scope,,hf
+Who directed the movie 'Inception' starring Leonardo DiCaprio?,out_of_scope,,hf
+Design a technical routine for improving my deadlift form.,generate_plan,,hf
+I want a plan to transition to a fully vegetarian diet.,generate_plan,,hf
+I feel accomplished for waking up early to exercise before work.,log_progress,,hf
+I want a diet plan that's easy on my stomach.,generate_plan,,hf
+What is the Pythagorean theorem used for?,out_of_scope,,hf
+How do I take care of a new puppy?,out_of_scope,,hf
+What are some common signs of being vitamin D deficient?,get_nutrition,,hf
+How do you make a perfect cup of English breakfast tea?,out_of_scope,,hf
+What are the benefits of taking zinc supplements?,get_nutrition,,hf
+How many calories are in a shot of vodka?,get_nutrition,,hf
+I'm grateful for your help on this journey.,motivation,,hf
+How important is getting enough sleep for muscle recovery?,motivation,,hf
+Find a guide on how to build an athletic stance for sports.,find_exercise,,hf
+Design a nutrition plan for someone with an iron deficiency.,generate_plan,,hf
+Show me some advanced push-up variations like the archer push-up.,find_exercise,,hf
+Is it better to do my cardio session before or after lifting weights?,motivation,,hf
+Can you make a 7-day vegan meal plan for weight loss?,generate_plan,,hf
+What are isometric exercises and what are they good for?,find_exercise,,hf
+I feel like I'm hitting a plateau.,log_progress,,hf
+I’m not sure if I should focus on building strength or improving my endurance first.,motivation,,hf
+My body feels completely and utterly exhausted.,log_progress,,hf
+I had no idea there were so many different types of protein powder.,motivation,,hf
+How to change my car's oil.,out_of_scope,,hf
+Feeling mentally clear and calm after my morning meditation.,log_progress,,hf
+Design a workout routine using only a pull-up bar and the floor.,generate_plan,,hf
+Generate a workout plan using a TRX suspension trainer.,generate_plan,,hf
+What do you think about body positivity in the fitness world?,motivation,,hf
+What is the difference between aerobic and anaerobic exercise?,find_exercise,,hf
+How to do a Jefferson curl for hamstring flexibility.,find_exercise,,hf
+I'm trying to cut down on added sugar in my diet.,motivation,,hf
+Show me a quick 5-minute warm-up before a run.,find_exercise,,hf
+What is the significance of the Great Wall of China?,out_of_scope,,hf
+"I'm so stressed out from work, I really need a good workout.",log_progress,,hf
+Who wrote the US Constitution?,out_of_scope,,hf
+How to do a wall sit correctly for quad endurance.,find_exercise,,hf
+How many calories are in a large Caesar salad with dressing?,get_nutrition,,hf
+I want a plan to increase my daily water intake.,generate_plan,,hf
+How to do a landmine press.,find_exercise,,hf
+My focus was amazing during my lifting session this afternoon.,log_progress,,hf
+What's your opinion on using smelling salts before a heavy lift?,motivation,,hf
+What’s the protein content in 200g of salmon?,get_nutrition,,hf
+How to do a concentration curl correctly.,find_exercise,,hf
+How many calories are in a tablespoon of honey?,get_nutrition,,hf
+Are chia seeds a superfood?,get_nutrition,,hf
+What is EMOM in CrossFit?,find_exercise,,hf
+I'm feeling really on top of my game in every aspect.,log_progress,,hf
+"Okay, that makes a whole lot more sense now.",motivation,,hf
+What's the difference between high-bar and low-bar squats in powerlifting?,find_exercise,,hf
+What's the best way to clean a cast iron skillet?,out_of_scope,,hf
+I felt really energized during my run this morning.,log_progress,,hf
+Who was Albert Einstein?,out_of_scope,,hf
+What are some good vegan protein sources besides tofu?,get_nutrition,,hf
+"Got it, thanks for all the useful info.",motivation,,hf
+Is kombucha really good for you?,get_nutrition,,hf
+That's a really interesting way to think about my weekly nutrition.,motivation,,hf
+What do you think about those '30-day shred' programs?,motivation,,hf
+What's the difference between a republic and a democracy?,out_of_scope,,hf
+Who wrote the classic American novel 'To Kill a Mockingbird'?,out_of_scope,,hf
+What's the best laptop for a college student?,out_of_scope,,hf
+My endurance on the treadmill is definitely improving week by week.,log_progress,,hf
+Design a High-Intensity Interval Training (HIIT) program for fat loss.,generate_plan,,hf
+Show me a 20-minute HIIT workout for beginners.,find_exercise,,hf
+How do I keep my back safe during a deadlift?,ask_form,,original
+What is the correct squat depth?,ask_form,,original
+Can you explain push-up hand placement?,ask_form,,original
+How do I brace my core during exercise?,ask_form,,original
+What is the right way to do a bodyweight lunge?,ask_form,,original
+How should I breathe during a bench press?,ask_form,,original
+How do I avoid rounding my back when lifting?,ask_form,,original
+Can you explain plank alignment?,ask_form,,original
+What should my feet do during a squat?,ask_form,,original
+How do I perform a dumbbell row?,ask_form,,original
+What is the correct setup for a shoulder press?,ask_form,,original
+How can I improve my push-up form?,ask_form,,original
+How do I safely start doing deadlifts?,ask_form,,original
+Where should my elbows be during a push-up?,ask_form,,original
+How do I perform a glute bridge correctly?,ask_form,,original
+Can you give me form tips for lunges?,ask_form,,original
+What are common mistakes in a plank?,ask_form,,original
+How do I set up for a barbell squat?,ask_form,,original
+How should I land during a jump squat?,ask_form,,original
+Can you explain neutral spine during training?,ask_form,,original
+How do I do a row without swinging?,ask_form,,original
+What is the safest way to start strength training?,ask_form,,original
+Build me a four week beginner workout plan,generate_plan,,original
+Can you organize my workouts for three days each week,generate_plan,,original
+Create a home routine for building strength,generate_plan,,original
+I need a simple plan for losing weight,generate_plan,,original
+Make a weekly program with rest days,generate_plan,,original
+Design a routine for someone new to the gym,generate_plan,,original
+Give me a full body training schedule,generate_plan,,original
+Can you plan workouts around my dumbbells,generate_plan,,original
+I want a program for improving my endurance,generate_plan,,original
+Create a short workout plan for busy days,generate_plan,,original
+What should my first week of training look like,generate_plan,,original
+Make a strength routine with bodyweight exercises,generate_plan,,original
+Plan my workouts around three available days,generate_plan,,original
+Can you create a simple muscle building routine,generate_plan,,original
+Give me a beginner home workout schedule,generate_plan,,original
+I need a routine that fits into 30 minutes,generate_plan,,original
+Create a plan for training my whole body,generate_plan,,original
+How should I structure my weekly workouts,generate_plan,,original
+Make a low equipment fitness program,generate_plan,,original
+Can you build a routine for getting stronger,generate_plan,,original
+What are good exercises for the upper body,find_exercise,,original
+Which exercises work the glutes best,find_exercise,,original
+Suggest simple exercises for a new lifter,find_exercise,,original
+What can I do instead of a barbell squat,find_exercise,,original
+Which movements train the hamstrings,find_exercise,,original
+Recommend exercises I can do at home,find_exercise,,original
+What are effective exercises for my arms,find_exercise,,original
+Show me beginner exercises for the core,find_exercise,,original
+Which exercises target the shoulders,find_exercise,,original
+What are good bodyweight leg exercises,find_exercise,,original
+Can you suggest exercises for a stronger back,find_exercise,,original
+What should I do to train my chest at home,find_exercise,,original
+Which exercises use a kettlebell,find_exercise,,original
+Recommend movements for improving stamina,find_exercise,,original
+What exercises can replace a push-up,find_exercise,,original
+Show me some beginner glute exercises,find_exercise,,original
+What exercises help with general fitness,find_exercise,,original
+Which exercises can I do with resistance bands,find_exercise,,original
+Suggest a few compound exercises,find_exercise,,original
+What are safe exercises for a beginner,find_exercise,,original
+How should I position my feet for lunges,ask_form,,original
+Can you walk me through a proper deadlift,ask_form,,original
+What should I do with my hips during a squat,ask_form,,original
+How do I keep my wrists straight in a push-up,ask_form,,original
+What is the correct plank duration for a beginner,ask_form,,original
+How do I control the lowering phase of an exercise,ask_form,,original
+Can you explain safe bench press technique,ask_form,,original
+How should I hold dumbbells during a row,ask_form,,original
+What does good lunge posture look like,ask_form,,original
+How do I keep my shoulders safe during pressing,ask_form,,original
+Can you explain how to breathe during squats,ask_form,,original
+How do I stop my knees from caving in,ask_form,,original
+What is the proper starting position for a row,ask_form,,original
+How should my back feel during a hip hinge,ask_form,,original
+Can you describe correct shoulder press form,ask_form,,original
+How do I modify a push-up while learning form,ask_form,,original
+What should I avoid when doing a deadlift,ask_form,,original
+How do I keep my neck neutral during a plank,ask_form,,original
+Can you explain the movement pattern of a squat,ask_form,,original
+What is the correct tempo for a beginner exercise,ask_form,,original
+How can I get enough protein from food,get_nutrition,,original
+What is a balanced meal for someone who trains,get_nutrition,,original
+What should I eat on a rest day,get_nutrition,,original
+How can nutrition support strength training,get_nutrition,,original
+What are healthy sources of carbohydrates,get_nutrition,,original
+How much water should I drink around workouts,get_nutrition,,original
+What is a simple meal after exercise,get_nutrition,,original
+What foods are high in protein,get_nutrition,,original
+How do I eat for better endurance,get_nutrition,,original
+Can you explain the role of calories in fitness,get_nutrition,,original
+What are nutritious snacks before training,get_nutrition,,original
+How can I lose weight without skipping meals,get_nutrition,,original
+What should a beginner know about sports nutrition,get_nutrition,,original
+How do I build a healthy plate,get_nutrition,,original
+What should I eat when trying to gain muscle,get_nutrition,,original
+Are vegetables important for workout recovery,get_nutrition,,original
+How can I make my diet more consistent,get_nutrition,,original
+What is a good breakfast before exercise,get_nutrition,,original
+Can you give general advice for eating around training,get_nutrition,,original
+What nutrients support recovery after exercise,get_nutrition,,original
+I completed four sets of rows today,log_progress,,original
+Please record that I trained my legs,log_progress,,original
+I walked for 30 minutes this morning,log_progress,,original
+I finished my strength session,log_progress,,original
+Today I completed my planned workout,log_progress,,original
+I ran two kilometers and want to log it,log_progress,,original
+I did ten push-ups in my workout,log_progress,,original
+I want to track my training this week,log_progress,,original
+I completed a dumbbell workout,log_progress,,original
+Log a 45 minute cardio session,log_progress,,original
+I finished my first gym session,log_progress,,original
+I trained chest and shoulders today,log_progress,,original
+Please record my progress from today,log_progress,,original
+I did three rounds of my circuit,log_progress,,original
+I completed my beginner routine,log_progress,,original
+I want to note that I exercised today,log_progress,,original
+I lifted weights for the first time,log_progress,,original
+I finished a bodyweight workout,log_progress,,original
+Record my workout as completed,log_progress,,original
+I trained for an hour today,log_progress,,original
+I need encouragement to start exercising,motivation,,original
+I have been struggling to stay consistent,motivation,,original
+Can you help me get back into training,motivation,,original
+I skipped my workout and feel discouraged,motivation,,original
+Give me a reason to go for a walk,motivation,,original
+I want to build a better exercise habit,motivation,,original
+How can I stay motivated this week,motivation,,original
+I feel nervous about starting at the gym,motivation,,original
+Please encourage me before my workout,motivation,,original
+I am having trouble staying active,motivation,,original
+Give me a simple fitness pep talk,motivation,,original
+I need help getting started today,motivation,,original
+Exercise feels difficult to maintain,motivation,,original
+I want to become more consistent,motivation,,original
+Can you help me overcome workout procrastination,motivation,,original
+I feel discouraged by slow progress,motivation,,original
+Remind me why small workouts matter,motivation,,original
+I need support to finish my session,motivation,,original
+How do I make exercise a habit,motivation,,original
+I am not feeling confident about training,motivation,,original
+Can you tell me what medication treats my back pain,medical_or_injury,,original
+I have a serious injury and need a diagnosis,medical_or_injury,,original
+Should I exercise with chest pain,medical_or_injury,,original
+What treatment should I use for a torn muscle,medical_or_injury,,original
+Can you interpret my medical scan,medical_or_injury,,original
+I am experiencing sudden severe pain,medical_or_injury,,original
+Tell me whether my symptoms are dangerous,medical_or_injury,,original
+What prescription should I take for recovery,out_of_scope,,original
+Can you replace advice from my doctor,medical_or_injury,,original
+I think I dislocated my shoulder,medical_or_injury,,original
+Is this exercise safe with my medical condition,medical_or_injury,,original
+How should I treat a possible fracture,medical_or_injury,,original
+I have numbness during my workout,medical_or_injury,,original
+Can you diagnose why my knee is swollen,medical_or_injury,,original
+What should I do about persistent pain,medical_or_injury,,original
+I need medical advice about exercising,medical_or_injury,,original
+Can you tell me if I have an illness,medical_or_injury,,original
+My ankle is badly injured after training,medical_or_injury,,original
+Should I ignore pain while lifting,medical_or_injury,,original
+What medicine will heal my sports injury,medical_or_injury,,original
+Create a routine for three beginner workouts,generate_plan,,original
+Plan a week of training with two rest days,generate_plan,,original
+I need a simple plan for home strength training,generate_plan,,original
+Make me a routine focused on general fitness,generate_plan,,original
+Build a program using only bodyweight movements,generate_plan,,original
+How should I organize my first month of exercise,generate_plan,,original
+Give me a short plan for improving stamina,generate_plan,,original
+Create a workout schedule that fits my busy week,generate_plan,,original
+I want a beginner plan for gaining strength,generate_plan,,original
+Can you design a low impact weekly routine,generate_plan,,original
+What are some exercises for stronger hamstrings,find_exercise,,original
+Which movements can build my chest,find_exercise,,original
+Suggest exercises for a home leg workout,find_exercise,,original
+What can I do to train my upper back,find_exercise,,original
+What exercises are suitable for weak beginners,find_exercise,,original
+Recommend movements that use no equipment,find_exercise,,original
+Which exercises work the triceps,find_exercise,,original
+Show me exercises for improving balance,find_exercise,,original
+What are good exercises for a full body session,find_exercise,,original
+Suggest movements for a dumbbell workout,find_exercise,,original
+How do I perform a squat without hurting my knees,ask_form,,original
+Can you explain how to start a deadlift,ask_form,,original
+How should I align my body in a push-up,ask_form,,original
+What is the correct way to hold a plank,ask_form,,original
+How do I keep my chest up during a lunge,ask_form,,original
+Can you explain safe dumbbell row technique,ask_form,,original
+Where should I place my feet for a deadlift,ask_form,,original
+How do I control my breathing during lifting,ask_form,,original
+What are the main form cues for a bench press,ask_form,,original
+How can I avoid swinging during a curl,ask_form,,original
+What are easy high protein foods,get_nutrition,,original
+How should I eat on training days,get_nutrition,,original
+What is a healthy snack after exercise,get_nutrition,,original
+How can I fuel a long workout,get_nutrition,,original
+What foods help support muscle recovery,get_nutrition,,original
+How do I plan balanced meals for fitness,get_nutrition,,original
+What should I drink during exercise,get_nutrition,,original
+How can I reduce calories sensibly,get_nutrition,,original
+What are good plant based protein sources,get_nutrition,,original
+Can you explain nutrition for beginners,get_nutrition,,original
+I finished a chest workout today,log_progress,,original
+Please log my 20 minute walk,log_progress,,original
+I completed two rounds of my exercises,log_progress,,original
+I trained my back this afternoon,log_progress,,original
+Record that I did a beginner workout,log_progress,,original
+I finished my planned session,log_progress,,original
+I want to note that I ran this morning,log_progress,,original
+I completed my strength training for today,log_progress,,original
+Log my workout as four sets of squats,log_progress,,original
+I exercised for 30 minutes today,log_progress,,original
+I need motivation to return after a break,motivation,,original
+I am finding it hard to begin my workout,motivation,,original
+Please give me encouragement for today,motivation,,original
+I want to stay active even when I am busy,motivation,,original
+How can I stop giving up on exercise,motivation,,original
+I feel frustrated with my progress,motivation,,original
+Help me make exercise feel manageable,motivation,,original
+I need a small push to train,motivation,,original
+Can you encourage me to take a walk,motivation,,original
+I want to feel more confident at the gym,motivation,,original
+Should I take painkillers for my workout injury,medical_or_injury,,original
+I have swelling after exercise and need a diagnosis,medical_or_injury,,original
+Can you tell me what is wrong with my back,out_of_scope,,original
+Is it safe to train with a suspected fracture,medical_or_injury,,original
+What treatment should I use for severe knee pain,medical_or_injury,,original
+I feel dizzy and unwell while exercising,medical_or_injury,,original
+Can you prescribe something for muscle pain,medical_or_injury,,original
+I have a medical condition and need exercise clearance,medical_or_injury,,original
+Should I continue lifting with numbness,medical_or_injury,,original
+Can you interpret my injury symptoms,medical_or_injury,,original
+plan please,generate_plan,,augmented_template
+design a a 5 days someone new to training a barbell workuot plan for conditioning,generate_plan,,augmented_template
+make a 5 days someone new to training a barbell workout plan for conditioning,generate_plan,,augmented_template
+build a 5 days someone new to training a barbell wo plan for conditioning,generate_plan,,augmented_template
+write a 5 days someone new to training a barbell workout plan for conditioning I am not sure where to start and would appreciate a simple answer that fits my week.,generate_plan,,augmented_template
+set up a 5 days someone new to training a barbell workout plan for conditioning,generate_plan,ask_form,augmented_template
+give me a 5 days someone new to training a barbell workuot plan for conditioning,generate_plan,,augmented_template
+looking for a 5 days someone new to training a barbell workout plan for conditioning,generate_plan,,augmented_template
+coach me through a 5 days someone new to training a barbell wo plan for conditioning,generate_plan,,augmented_template
+im trying to start a 5 days someone new to training a barbell workout plan for conditioning I am not sure where to start and would appreciate a simple answer that fits my week.,generate_plan,,augmented_template
+got time for a a 5 days someone new to training a barbell workuot plan for conditioning,generate_plan,,augmented_template
+can u make a 5 days someone new to training a barbell workout plan for conditioning,generate_plan,,augmented_template
+pls make a 5 days someone new to training a barbell wo plan for conditioning,generate_plan,,augmented_template
+my week needs a 5 days someone new to training a barbell workout plan for conditioning I am not sure where to start and would appreciate a simple answer that fits my week.,generate_plan,,augmented_template
+please map a 5 days someone new to training a barbell workout plan for conditioning,generate_plan,ask_form,augmented_template
+could i get a 5 days someone new to training a barbell workuot plan for conditioning,generate_plan,,augmented_template
+thinking about a a 5 days someone new to training a barbell workout plan for conditioning,generate_plan,,augmented_template
+schedule a a 5 days someone new to training a barbell wo plan for conditioning,generate_plan,,augmented_template
+how about a a 5 days someone new to training a barbell workout plan for conditioning I am not sure where to start and would appreciate a simple answer that fits my week.,generate_plan,,augmented_template
+help me plan a 5 days someone new to training a barbell workuot plan for conditioning,generate_plan,,augmented_template
+can someone create a 5 days someone new to training a barbell workout plan for conditioning,generate_plan,,augmented_template
+show me a a 5 days someone new to training a barbell wo plan for conditioning,generate_plan,,augmented_template
+could you map out a Monday and Wednesday beginner a kettlebell workout plan for build muscle I am not sure where to start and would appreciate a simple answer that fits my week.,generate_plan,,augmented_template
+im looking for a monday and wednesday beginner a kettlebell workout plan for build muscle,generate_plan,ask_form,augmented_template
+help me build a Monday and Wednesday beginner a kettlebell workuot plan for build muscle,generate_plan,,augmented_template
+need a a monday and wednesday beginner a kettlebell workout plan for build muscle,generate_plan,,augmented_template
+plan out a Monday and Wednesday beginner a kettlebell wo plan for build muscle,generate_plan,,augmented_template
+what would a a Monday and Wednesday beginner a kettlebell workout plan for build muscle I am not sure where to start and would appreciate a simple answer that fits my week.,generate_plan,,augmented_template
+Monday and Wednesday plan,generate_plan,,augmented_template
+id like a Monday and Wednesday beginner a kettlebell workuot plan for build muscle,generate_plan,,augmented_template
+can we create a monday and wednesday beginner a kettlebell workout plan for build muscle,generate_plan,,augmented_template
+design a a Monday and Wednesday beginner a kettlebell wo plan for build muscle,generate_plan,,augmented_template
+make a Monday and Wednesday beginner a kettlebell workout plan for build muscle I am not sure where to start and would appreciate a simple answer that fits my week.,generate_plan,,augmented_template
+build a monday and wednesday beginner a kettlebell workout plan for build muscle,generate_plan,ask_form,augmented_template
+write a Monday and Wednesday beginner a kettlebell workuot plan for build muscle,generate_plan,,augmented_template
+set up a monday and wednesday beginner a kettlebell workout plan for build muscle,generate_plan,,augmented_template
+give me a Monday and Wednesday beginner a kettlebell wo plan for build muscle,generate_plan,,augmented_template
+looking for a Monday and Wednesday beginner a kettlebell workout plan for build muscle I am not sure where to start and would appreciate a simple answer that fits my week.,generate_plan,,augmented_template
+im trying to start a Monday and Wednesday beginner a kettlebell workuot plan for build muscle,generate_plan,,augmented_template
+gym bro question i need a monday and wednesday beginner a kettlebell workout plan for build muscle,generate_plan,,augmented_template
+got time for a a Monday and Wednesday beginner a kettlebell wo plan for build muscle,generate_plan,,augmented_template
+can u make a Monday and Wednesday beginner a kettlebell workout plan for build muscle I am not sure where to start and would appreciate a simple answer that fits my week.,generate_plan,,augmented_template
+pls make a monday and wednesday beginner a kettlebell workout plan for build muscle,generate_plan,ask_form,augmented_template
+my week needs a Monday and Wednesday beginner a kettlebell workuot plan for build muscle,generate_plan,,augmented_template
+please map a monday and wednesday beginner a kettlebell workout plan for build muscle,generate_plan,,augmented_template
+could i get a Monday and Wednesday beginner a kettlebell wo plan for build muscle,generate_plan,,augmented_template
+thinking about a a Monday and Wednesday beginner a kettlebell workout plan for build muscle I am not sure where to start and would appreciate a simple answer that fits my week.,generate_plan,,augmented_template
+beginner routine,generate_plan,,augmented_template
+how about a a Monday and Wednesday beginner a kettlebell workuot plan for build muscle,generate_plan,,augmented_template
+i want a monday and wednesday beginner a kettlebell workout plan for build muscle,generate_plan,,augmented_template
+help me plan a Monday and Wednesday beginner a kettlebell wo plan for build muscle,generate_plan,,augmented_template
+can someone create a Monday and Wednesday beginner a kettlebell workout plan for build muscle I am not sure where to start and would appreciate a simple answer that fits my week.,generate_plan,,augmented_template
+show me a a monday and wednesday beginner a kettlebell workout plan for build muscle,generate_plan,ask_form,augmented_template
+could you map out a Monday Wednesday Friday intermediate resistance bands workuot plan for lose weight,generate_plan,,augmented_template
+im looking for a monday wednesday friday intermediate resistance bands workout plan for lose weight,generate_plan,,augmented_template
+help me build a Monday Wednesday Friday intermediate resistance bands wo plan for lose weight,generate_plan,,augmented_template
+need a a Monday Wednesday Friday intermediate resistance bands workout plan for lose weight I am not sure where to start and would appreciate a simple answer that fits my week.,generate_plan,,augmented_template
+what would a a Monday Wednesday Friday intermediate resistance bands workuot plan for lose weight,generate_plan,,augmented_template
+put together a monday wednesday friday intermediate resistance bands workout plan for lose weight,generate_plan,,augmented_template
+id like a Monday Wednesday Friday intermediate resistance bands wo plan for lose weight,generate_plan,,augmented_template
+can we create a Monday Wednesday Friday intermediate resistance bands workout plan for lose weight I am not sure where to start and would appreciate a simple answer that fits my week.,generate_plan,,augmented_template
+design a a monday wednesday friday intermediate resistance bands workout plan for lose weight,generate_plan,ask_form,augmented_template
+make a Monday Wednesday Friday intermediate resistance bands workuot plan for lose weight,generate_plan,,augmented_template
+build a monday wednesday friday intermediate resistance bands workout plan for lose weight,generate_plan,,augmented_template
+write a Monday Wednesday Friday intermediate resistance bands wo plan for lose weight,generate_plan,,augmented_template
+set up a Monday Wednesday Friday intermediate resistance bands workout plan for lose weight I am not sure where to start and would appreciate a simple answer that fits my week.,generate_plan,,augmented_template
+Monday Wednesday Friday plan,generate_plan,,augmented_template
+looking for a Monday Wednesday Friday intermediate resistance bands workuot plan for lose weight,generate_plan,,augmented_template
+coach me through a monday wednesday friday intermediate resistance bands workout plan for lose weight,generate_plan,,augmented_template
+im trying to start a Monday Wednesday Friday intermediate resistance bands wo plan for lose weight,generate_plan,,augmented_template
+gym bro question i need a Monday Wednesday Friday intermediate resistance bands workout plan for lose weight I am not sure where to start and would appreciate a simple answer that fits my week.,generate_plan,,augmented_template
+got time for a a monday wednesday friday intermediate resistance bands workout plan for lose weight,generate_plan,ask_form,augmented_template
+can u make a Monday Wednesday Friday intermediate resistance bands workuot plan for lose weight,generate_plan,,augmented_template
+pls make a monday wednesday friday intermediate resistance bands workout plan for lose weight,generate_plan,,augmented_template
+my week needs a Monday Wednesday Friday intermediate resistance bands wo plan for lose weight,generate_plan,,augmented_template
+please map a Monday Wednesday Friday intermediate resistance bands workout plan for lose weight I am not sure where to start and would appreciate a simple answer that fits my week.,generate_plan,,augmented_template
+thinking about a a Monday Wednesday Friday intermediate resistance bands workuot plan for lose weight,generate_plan,,augmented_template
+schedule a a monday wednesday friday intermediate resistance bands workout plan for lose weight,generate_plan,,augmented_template
+how about a a Monday Wednesday Friday intermediate resistance bands wo plan for lose weight,generate_plan,,augmented_template
+i want a Monday Wednesday Friday intermediate resistance bands workout plan for lose weight I am not sure where to start and would appreciate a simple answer that fits my week.,generate_plan,,augmented_template
+help me plan a monday wednesday friday intermediate resistance bands workout plan for lose weight,generate_plan,ask_form,augmented_template
+can someone create a Monday Wednesday Friday intermediate resistance bands workuot plan for lose weight,generate_plan,,augmented_template
+show me a a monday wednesday friday intermediate resistance bands workout plan for lose weight,generate_plan,,augmented_template
+could you map out a three days a week advanced bodyweight wo plan for get stronger,generate_plan,,augmented_template
+im looking for a three days a week advanced bodyweight workout plan for get stronger I am not sure where to start and would appreciate a simple answer that fits my week.,generate_plan,,augmented_template
+need a a three days a week advanced bodyweight workuot plan for get stronger,generate_plan,,augmented_template
+plan out a three days a week advanced bodyweight workout plan for get stronger,generate_plan,,augmented_template
+what would a a three days a week advanced bodyweight wo plan for get stronger,generate_plan,,augmented_template
+put together a three days a week advanced bodyweight workout plan for get stronger I am not sure where to start and would appreciate a simple answer that fits my week.,generate_plan,,augmented_template
+id like a three days a week advanced bodyweight workout plan for get stronger,generate_plan,ask_form,augmented_template
+can we create a three days a week advanced bodyweight workuot plan for get stronger,generate_plan,,augmented_template
+design a a three days a week advanced bodyweight workout plan for get stronger,generate_plan,,augmented_template
+make a three days a week advanced bodyweight wo plan for get stronger,generate_plan,,augmented_template
+build a three days a week advanced bodyweight workout plan for get stronger I am not sure where to start and would appreciate a simple answer that fits my week.,generate_plan,,augmented_template
+set up a three days a week advanced bodyweight workuot plan for get stronger,generate_plan,,augmented_template
+give me a three days a week advanced bodyweight workout plan for get stronger,generate_plan,,augmented_template
+looking for a three days a week advanced bodyweight wo plan for get stronger,generate_plan,,augmented_template
+coach me through a three days a week advanced bodyweight workout plan for get stronger I am not sure where to start and would appreciate a simple answer that fits my week.,generate_plan,,augmented_template
+im trying to start a three days a week advanced bodyweight workout plan for get stronger,generate_plan,ask_form,augmented_template
+gym bro question i need a three days a week advanced bodyweight workuot plan for get stronger,generate_plan,,augmented_template
+got time for a a three days a week advanced bodyweight workout plan for get stronger,generate_plan,,augmented_template
+can u make a three days a week advanced bodyweight wo plan for get stronger,generate_plan,,augmented_template
+pls make a three days a week advanced bodyweight workout plan for get stronger I am not sure where to start and would appreciate a simple answer that fits my week.,generate_plan,,augmented_template
+please map a three days a week advanced bodyweight workuot plan for get stronger,generate_plan,,augmented_template
+could i get a three days a week advanced bodyweight workout plan for get stronger,generate_plan,,augmented_template
+thinking about a a three days a week advanced bodyweight wo plan for get stronger,generate_plan,,augmented_template
+schedule a a three days a week advanced bodyweight workout plan for get stronger I am not sure where to start and would appreciate a simple answer that fits my week.,generate_plan,,augmented_template
+how about a a three days a week advanced bodyweight workout plan for get stronger,generate_plan,ask_form,augmented_template
+i want a three days a week advanced bodyweight workuot plan for get stronger,generate_plan,,augmented_template
+help me plan a three days a week advanced bodyweight workout plan for get stronger,generate_plan,,augmented_template
+can someone create a three days a week advanced bodyweight wo plan for get stronger,generate_plan,,augmented_template
+show me a a three days a week advanced bodyweight workout plan for get stronger I am not sure where to start and would appreciate a simple answer that fits my week.,generate_plan,,augmented_template
+2 days plan,generate_plan,,augmented_template
+im looking for a 2 days someone new to training no equipment workuot plan for improve endurance,generate_plan,,augmented_template
+help me build a 2 days someone new to training no equipment workout plan for improve endurance,generate_plan,,augmented_template
+need a a 2 days someone new to training no equipment wo plan for improve endurance,generate_plan,,augmented_template
+plan out a 2 days someone new to training no equipment workout plan for improve endurance I am not sure where to start and would appreciate a simple answer that fits my week.,generate_plan,,augmented_template
+what would a a 2 days someone new to training no equipment workout plan for improve endurance,generate_plan,ask_form,augmented_template
+put together a 2 days someone new to training no equipment workuot plan for improve endurance,generate_plan,,augmented_template
+id like a 2 days someone new to training no equipment workout plan for improve endurance,generate_plan,,augmented_template
+can we create a 2 days someone new to training no equipment wo plan for improve endurance,generate_plan,,augmented_template
+design a a 2 days someone new to training no equipment workout plan for improve endurance I am not sure where to start and would appreciate a simple answer that fits my week.,generate_plan,,augmented_template
+build a 2 days someone new to training no equipment workuot plan for improve endurance,generate_plan,,augmented_template
+write a 2 days someone new to training no equipment workout plan for improve endurance,generate_plan,,augmented_template
+set up a 2 days someone new to training no equipment wo plan for improve endurance,generate_plan,,augmented_template
+give me a 2 days someone new to training no equipment workout plan for improve endurance I am not sure where to start and would appreciate a simple answer that fits my week.,generate_plan,,augmented_template
+looking for a 2 days someone new to training no equipment workout plan for improve endurance,generate_plan,ask_form,augmented_template
+coach me through a 2 days someone new to training no equipment workuot plan for improve endurance,generate_plan,,augmented_template
+im trying to start a 2 days someone new to training no equipment workout plan for improve endurance,generate_plan,,augmented_template
+gym bro question i need a 2 days someone new to training no equipment wo plan for improve endurance,generate_plan,,augmented_template
+got time for a a 2 days someone new to training no equipment workout plan for improve endurance I am not sure where to start and would appreciate a simple answer that fits my week.,generate_plan,,augmented_template
+pls make a 2 days someone new to training no equipment workuot plan for improve endurance,generate_plan,,augmented_template
+my week needs a 2 days someone new to training no equipment workout plan for improve endurance,generate_plan,,augmented_template
+pls map a 2 days someone new to training no equipment wo plan for improve endurance,generate_plan,,augmented_template
+could i get a 2 days someone new to training no equipment workout plan for improve endurance I am not sure where to start and would appreciate a simple answer that fits my week.,generate_plan,,augmented_template
+thinking about a a 2 days someone new to training no equipment workout plan for improve endurance,generate_plan,ask_form,augmented_template
+schedule a a 2 days someone new to training no equipment workuot plan for improve endurance,generate_plan,,augmented_template
+how about a a 2 days someone new to training no equipment workout plan for improve endurance,generate_plan,,augmented_template
+i want a 2 days someone new to training no equipment wo plan for improve endurance,generate_plan,,augmented_template
+help me plan a 2 days someone new to training no equipment workout plan for improve endurance I am not sure where to start and would appreciate a simple answer that fits my week.,generate_plan,,augmented_template
+show me a a 2 days someone new to training no equipment workuot plan for improve endurance,generate_plan,,augmented_template
+could you map out a 3 days beginner home equipment workout plan for general fitness,generate_plan,,augmented_template
+im looking for a 3 days beginner home equipment wo plan for general fitness,generate_plan,,augmented_template
+help me build a 3 days beginner home equipment workout plan for general fitness I am not sure where to start and would appreciate a simple answer that fits my week.,generate_plan,,augmented_template
+need a a 3 days beginner home equipment workout plan for general fitness,generate_plan,ask_form,augmented_template
+plan out a 3 days beginner home equipment workuot plan for general fitness,generate_plan,,augmented_template
+what would a a 3 days beginner home equipment workout plan for general fitness,generate_plan,,augmented_template
+put together a 3 days beginner home equipment wo plan for general fitness,generate_plan,,augmented_template
+id like a 3 days beginner home equipment workout plan for general fitness I am not sure where to start and would appreciate a simple answer that fits my week.,generate_plan,,augmented_template
+3 days plan,generate_plan,,augmented_template
+leg exercises,find_exercise,,augmented_template
+which exersizes help legs using a kettlebell,find_exercise,,augmented_template
+id like options for legs using a kettlebell,find_exercise,,augmented_template
+what can i do for legs using a kettlebell,find_exercise,,augmented_template
+name some exercises for legs using a kettlebell I am not sure where to start and would appreciate a simple answer that fits my week.,find_exercise,,augmented_template
+suggest moves for legs using a kettlebell,find_exercise,ask_form,augmented_template
+got anything for legs using a kettlebell,find_exercise,,augmented_template
+which lifts work legs using a kettlebell,find_exercise,,augmented_template
+what should i use to train legs using a kettlebell,find_exercise,,augmented_template
+can u recommend legs using a kettlebell I am not sure where to start and would appreciate a simple answer that fits my week.,find_exercise,,augmented_template
+chest moves,find_exercise,,augmented_template
+im looking for moves for legs using a kettlebell,find_exercise,,augmented_template
+give me a few for legs using a kettlebell,find_exercise,,augmented_template
+what are my options for legs using a kettlebell,find_exercise,,augmented_template
+help with exercises for legs using a kettlebell I am not sure where to start and would appreciate a simple answer that fits my week.,find_exercise,,augmented_template
+which move is good for legs using a kettlebell,find_exercise,ask_form,augmented_template
+which moves target hamstrings using resistance bands,find_exercise,,augmented_template
+what can i use for hamstrings using resistance bands,find_exercise,,augmented_template
+show me options for hamstrings using resistance bands,find_exercise,,augmented_template
+im after exercises for hamstrings using resistance bands I am not sure where to start and would appreciate a simple answer that fits my week.,find_exercise,,augmented_template
+point me to moves for hamstrings using resistance bands,find_exercise,,augmented_template
+give me ideas for hamstrings using resistance bands,find_exercise,,augmented_template
+what should i try for hamstrings using resistance bands,find_exercise,,augmented_template
+recommend movements for hamstrings using resistance bands I am not sure where to start and would appreciate a simple answer that fits my week.,find_exercise,,augmented_template
+any good exercises for hamstrings using resistance bands,find_exercise,ask_form,augmented_template
+how can i train my hamstrings using resistance bands,find_exercise,,augmented_template
+what hits my hamstrings using resistance bands,find_exercise,,augmented_template
+can u list moves for hamstrings using resistance bands,find_exercise,,augmented_template
+need exercises for hamstrings using resistance bands I am not sure where to start and would appreciate a simple answer that fits my week.,find_exercise,,augmented_template
+what are good moves for hamstrings using resistance bands,find_exercise,,augmented_template
+help me find work for hamstrings using resistance bands,find_exercise,,augmented_template
+which exercises help hamstrings using resistance bands,find_exercise,,augmented_template
+id like options for hamstrings using resistance bands I am not sure where to start and would appreciate a simple answer that fits my week.,find_exercise,,augmented_template
+what can i do for hamstrings using resistance bands,find_exercise,ask_form,augmented_template
+name some exersizes for hamstrings using resistance bands,find_exercise,,augmented_template
+suggest moves for hamstrings using resistance bands,find_exercise,,augmented_template
+got anything for hamstrings using resistance bands,find_exercise,,augmented_template
+which lifts work hamstrings using resistance bands I am not sure where to start and would appreciate a simple answer that fits my week.,find_exercise,,augmented_template
+can u recomend hamstrings using resistance bands,find_exercise,,augmented_template
+pls suggest hamstrings using resistance bands,find_exercise,,augmented_template
+im looking for moves for hamstrings using resistance bands,find_exercise,,augmented_template
+give me a few for hamstrings using resistance bands I am not sure where to start and would appreciate a simple answer that fits my week.,find_exercise,,augmented_template
+what are my options for hamstrings using resistance bands,find_exercise,ask_form,augmented_template
+help with exersizes for hamstrings using resistance bands,find_exercise,,augmented_template
+which move is good for hamstrings using resistance bands,find_exercise,,augmented_template
+which moves target shoulders using bodyweight,find_exercise,,augmented_template
+what can i use for shoulders using bodyweight I am not sure where to start and would appreciate a simple answer that fits my week.,find_exercise,,augmented_template
+im after exersizes for shoulders using bodyweight,find_exercise,,augmented_template
+what works my shoulders using bodyweight,find_exercise,,augmented_template
+point me to moves for shoulders using bodyweight,find_exercise,,augmented_template
+give me ideas for shoulders using bodyweight I am not sure where to start and would appreciate a simple answer that fits my week.,find_exercise,,augmented_template
+what should i try for shoulders using bodyweight,find_exercise,ask_form,augmented_template
+recomend movements for shoulders using bodyweight,find_exercise,,augmented_template
+any good exercises for shoulders using bodyweight,find_exercise,,augmented_template
+how can i train my shoulders using bodyweight,find_exercise,,augmented_template
+what hits my shoulders using bodyweight I am not sure where to start and would appreciate a simple answer that fits my week.,find_exercise,,augmented_template
+need exersizes for shoulders using bodyweight,find_exercise,,augmented_template
+gym bro what trains shoulders using bodyweight,find_exercise,,augmented_template
+what are good moves for shoulders using bodyweight,find_exercise,,augmented_template
+help me find work for shoulders using bodyweight I am not sure where to start and would appreciate a simple answer that fits my week.,find_exercise,,augmented_template
+which exercises help shoulders using bodyweight,find_exercise,ask_form,augmented_template
+id like options for shoulders using bodyweight,find_exercise,,augmented_template
+what can i do for shoulders using bodyweight,find_exercise,,augmented_template
+name some exercises for shoulders using bodyweight,find_exercise,,augmented_template
+suggest moves for shoulders using bodyweight I am not sure where to start and would appreciate a simple answer that fits my week.,find_exercise,,augmented_template
+shoulders?,find_exercise,,augmented_template
+which lifts work shoulders using bodyweight,find_exercise,,augmented_template
+what should i use to train shoulders using bodyweight,find_exercise,,augmented_template
+can u recommend shoulders using bodyweight,find_exercise,,augmented_template
+pls suggest shoulders using bodyweight I am not sure where to start and would appreciate a simple answer that fits my week.,find_exercise,,augmented_template
+im looking for moves for shoulders using bodyweight,find_exercise,ask_form,augmented_template
+give me a few for shoulders using bodyweight,find_exercise,,augmented_template
+what are my options for shoulders using bodyweight,find_exercise,,augmented_template
+help with exercises for shoulders using bodyweight,find_exercise,,augmented_template
+which move is good for shoulders using bodyweight I am not sure where to start and would appreciate a simple answer that fits my week.,find_exercise,,augmented_template
+what can i use for arms using no equipment,find_exercise,,augmented_template
+show me options for arms using no equipment,find_exercise,,augmented_template
+im after exercises for arms using no equipment,find_exercise,,augmented_template
+what works my arms using no equipment I am not sure where to start and would appreciate a simple answer that fits my week.,find_exercise,,augmented_template
+point me to moves for arms using no equipment,find_exercise,ask_form,augmented_template
+give me ideas for arms using no equipment,find_exercise,,augmented_template
+what should i try for arms using no equipment,find_exercise,,augmented_template
+recommend movements for arms using no equipment,find_exercise,,augmented_template
+any good exercises for arms using no equipment I am not sure where to start and would appreciate a simple answer that fits my week.,find_exercise,,augmented_template
+what hits my arms using no equipment,find_exercise,,augmented_template
+can you list moves for arms using no equipment,find_exercise,,augmented_template
+need exercises for arms using no equipment,find_exercise,,augmented_template
+gym bro what trains arms using no equipment I am not sure where to start and would appreciate a simple answer that fits my week.,find_exercise,,augmented_template
+what are good moves for arms using no equipment,find_exercise,ask_form,augmented_template
+help me find work for arms using no equipment,find_exercise,,augmented_template
+which exercises help arms using no equipment,find_exercise,,augmented_template
+id like options for arms using no equipment,find_exercise,,augmented_template
+what can i do for arms using no equipment I am not sure where to start and would appreciate a simple answer that fits my week.,find_exercise,,augmented_template
+suggest moves for arms using no equipment,find_exercise,,augmented_template
+got anything for arms using no equipment,find_exercise,,augmented_template
+which lifts work arms using no equipment,find_exercise,,augmented_template
+what should i use to train arms using no equipment I am not sure where to start and would appreciate a simple answer that fits my week.,find_exercise,,augmented_template
+can u recommend arms using no equipment,find_exercise,ask_form,augmented_template
+pls suggest arms using no equipment,find_exercise,,augmented_template
+im looking for moves for arms using no equipment,find_exercise,,augmented_template
+give me a few for arms using no equipment,find_exercise,,augmented_template
+what are my options for arms using no equipment I am not sure where to start and would appreciate a simple answer that fits my week.,find_exercise,,augmented_template
+which move is good for arms using no equipment,find_exercise,,augmented_template
+which moves target core using home equipment,find_exercise,,augmented_template
+what can i use for core using home equipment,find_exercise,,augmented_template
+show me options for core using home equipment I am not sure where to start and would appreciate a simple answer that fits my week.,find_exercise,,augmented_template
+im after exercises for core using home equipment,find_exercise,ask_form,augmented_template
+what works my core using home equipment,find_exercise,,augmented_template
+point me to moves for core using home equipment,find_exercise,,augmented_template
+give me ideas for core using home equipment,find_exercise,,augmented_template
+what should i try for core using home equipment I am not sure where to start and would appreciate a simple answer that fits my week.,find_exercise,,augmented_template
+any good exersizes for core using home equipment,find_exercise,,augmented_template
+how can i train my core using home equipment,find_exercise,,augmented_template
+what hits my core using home equipment,find_exercise,,augmented_template
+can you list moves for core using home equipment I am not sure where to start and would appreciate a simple answer that fits my week.,find_exercise,,augmented_template
+need exercises for core using home equipment,find_exercise,ask_form,augmented_template
+gym bro what trains core using home equipment,find_exercise,,augmented_template
+what are good moves for core using home equipment,find_exercise,,augmented_template
+help me find work for core using home equipment,find_exercise,,augmented_template
+which exercises help core using home equipment I am not sure where to start and would appreciate a simple answer that fits my week.,find_exercise,,augmented_template
+what can i do for core using home equipment,find_exercise,,augmented_template
+name some exercises for core using home equipment,find_exercise,,augmented_template
+suggest moves for core using home equipment,find_exercise,,augmented_template
+got anything for core using home equipment I am not sure where to start and would appreciate a simple answer that fits my week.,find_exercise,,augmented_template
+which lifts work core using home equipment,find_exercise,ask_form,augmented_template
+what should i use to train core using home equipment,find_exercise,,augmented_template
+can u recommend core using home equipment,find_exercise,,augmented_template
+pls suggest core using home equipment,find_exercise,,augmented_template
+im looking for moves for core using home equipment I am not sure where to start and would appreciate a simple answer that fits my week.,find_exercise,,augmented_template
+what are my options for core using home equipment,find_exercise,,augmented_template
+help with exercises for core using home equipment,find_exercise,,augmented_template
+which move is good for core using home equipment,find_exercise,,augmented_template
+which moves target glutes using a gym I am not sure where to start and would appreciate a simple answer that fits my week.,find_exercise,,augmented_template
+what can i use for glutes using a gym,find_exercise,ask_form,augmented_template
+show me options for glutes using a gym,find_exercise,,augmented_template
+im after exercises for glutes using a gym,find_exercise,,augmented_template
+what works my glutes using a gym,find_exercise,,augmented_template
+point me to moves for glutes using a gym I am not sure where to start and would appreciate a simple answer that fits my week.,find_exercise,,augmented_template
+what should i try for glutes using a gym,find_exercise,,augmented_template
+recommend movements for glutes using a gym,find_exercise,,augmented_template
+any good exercises for glutes using a gym,find_exercise,,augmented_template
+how can i train my glutes using a gym I am not sure where to start and would appreciate a simple answer that fits my week.,find_exercise,,augmented_template
+what hits my glutes using a gym,find_exercise,ask_form,augmented_template
+can you list moves for glutes using a gym,find_exercise,,augmented_template
+need exercises for glutes using a gym,find_exercise,,augmented_template
+gym bro what trains glutes using a gym,find_exercise,,augmented_template
+what are good moves for glutes using a gym I am not sure where to start and would appreciate a simple answer that fits my week.,find_exercise,,augmented_template
+glutes?,find_exercise,,augmented_template
+which exersizes help glutes using a gym,find_exercise,,augmented_template
+id like options for glutes using a gym,find_exercise,,augmented_template
+squat technique,ask_form,,augmented_template
+what is a good setup for glute bridge and tell me the main form cues,ask_form,,augmented_template
+help me learn glute bridge and tell me the main form cues,ask_form,,augmented_template
+how do i correctly do glute bridge and tell me the main form cues,ask_form,,augmented_template
+what mistakes happen in glute bridge and tell me the main form cues I am not sure where to start and would appreciate a simple answer that fits my week.,ask_form,,augmented_template
+how do i nail glute bridge and tell me the main form cues,ask_form,find_exercise,augmented_template
+explain the setup for glute bridge and tell me the main form cues,ask_form,,augmented_template
+what cues help with glute bridge and tell me the main form cues,ask_form,,augmented_template
+how do i perform calf raise and tell me the main form cues,ask_form,,augmented_template
+what is the form for calf raise and tell me the main form cues I am not sure where to start and would appreciate a simple answer that fits my week.,ask_form,,augmented_template
+calf raise form,ask_form,,augmented_template
+show me how to do calf raise and tell me the main form cues,ask_form,,augmented_template
+how should i do calf raise and tell me the main form cues,ask_form,,augmented_template
+whats the safest way to do calf raise and tell me the main form cues,ask_form,,augmented_template
+walk me through calf raise and tell me the main form cues I am not sure where to start and would appreciate a simple answer that fits my week.,ask_form,,augmented_template
+how do you do calf raise and tell me the main form cues,ask_form,find_exercise,augmented_template
+i need help with calf raise and tell me the main form cues,ask_form,,augmented_template
+form check for calf raise and tell me the main form cues,ask_form,,augmented_template
+what are the cues for calf raise and tell me the main form cues,ask_form,,augmented_template
+how can i improve calf raise and tell me the main form cues I am not sure where to start and would appreciate a simple answer that fits my week.,ask_form,,augmented_template
+form help,ask_form,,augmented_template
+could you teach me calf raise and tell me the main form cues,ask_form,,augmented_template
+tell me how to perform calf raise and tell me the main form cues,ask_form,,augmented_template
+how am i meant to do calf raise and tell me the main form cues,ask_form,,augmented_template
+can u explain calf raise and tell me the main form cues I am not sure where to start and would appreciate a simple answer that fits my week.,ask_form,,augmented_template
+pls show me calf raise and tell me the main form cues,ask_form,find_exercise,augmented_template
+im confused about calf raise and tell me the main form cues,ask_form,,augmented_template
+what should i focus on for calf raise and tell me the main form cues,ask_form,,augmented_template
+how do i set up calf raise and tell me the main form cues,ask_form,,augmented_template
+how should my form look for calf raise and tell me the main form cues I am not sure where to start and would appreciate a simple answer that fits my week.,ask_form,,augmented_template
+technique tips for calf raise and tell me the main form cues,ask_form,,augmented_template
+how is this exercise done calf raise and tell me the main form cues,ask_form,,augmented_template
+what is a good setup for calf raise and tell me the main form cues,ask_form,,augmented_template
+help me learn calf raise and tell me the main form cues I am not sure where to start and would appreciate a simple answer that fits my week.,ask_form,,augmented_template
+how do i correctly do calf raise and tell me the main form cues,ask_form,find_exercise,augmented_template
+what mistakes happen in calf raise and tell me the main form cues,ask_form,,augmented_template
+how do i nail calf raise and tell me the main form cues,ask_form,,augmented_template
+explain the setup for calf raise and tell me the main form cues,ask_form,,augmented_template
+what cues help with calf raise and tell me the main form cues I am not sure where to start and would appreciate a simple answer that fits my week.,ask_form,,augmented_template
+what is the form for burpee and tell me the main form cues,ask_form,,augmented_template
+can you explain burpee and tell me the main form cues,ask_form,,augmented_template
+show me how to do burpee and tell me the main form cues,ask_form,,augmented_template
+how should i do burpee and tell me the main form cues I am not sure where to start and would appreciate a simple answer that fits my week.,ask_form,,augmented_template
+whats the safest way to do burpee and tell me the main form cues,ask_form,find_exercise,augmented_template
+walk me through burpee and tell me the main form cues,ask_form,,augmented_template
+how do you do burpee and tell me the main form cues,ask_form,,augmented_template
+i need help with burpee and tell me the main form cues,ask_form,,augmented_template
+form check for burpee and tell me the main form cues I am not sure where to start and would appreciate a simple answer that fits my week.,ask_form,,augmented_template
+burpee form,ask_form,,augmented_template
+how can i improve burpee and tell me the main form cues,ask_form,,augmented_template
+what does good form look like for burpee and tell me the main form cues,ask_form,,augmented_template
+could you teach me burpee and tell me the main form cues,ask_form,,augmented_template
+tell me how to perform burpee and tell me the main form cues I am not sure where to start and would appreciate a simple answer that fits my week.,ask_form,,augmented_template
+how am i meant to do burpee and tell me the main form cues,ask_form,find_exercise,augmented_template
+can u explain burpee and tell me the main form cues,ask_form,,augmented_template
+pls show me burpee and tell me the main form cues,ask_form,,augmented_template
+im confused about burpee and tell me the main form cues,ask_form,,augmented_template
+what should i focus on for burpee and tell me the main form cues I am not sure where to start and would appreciate a simple answer that fits my week.,ask_form,,augmented_template
+how should my form look for burpee and tell me the main form cues,ask_form,,augmented_template
+can someone explain burpee and tell me the main form cues,ask_form,,augmented_template
+technique tips for burpee and tell me the main form cues,ask_form,,augmented_template
+how is this exercise done burpee and tell me the main form cues I am not sure where to start and would appreciate a simple answer that fits my week.,ask_form,,augmented_template
+what is a good setup for burpee and tell me the main form cues,ask_form,find_exercise,augmented_template
+help me learn burpee and tell me the main form cues,ask_form,,augmented_template
+how do i correctly do burpee and tell me the main form cues,ask_form,,augmented_template
+what mistakes happen in burpee and tell me the main form cues,ask_form,,augmented_template
+how do i nail burpee and tell me the main form cues I am not sure where to start and would appreciate a simple answer that fits my week.,ask_form,,augmented_template
+what cues help with burpee and tell me the main form cues,ask_form,,augmented_template
+how do i perform squat and tell me the main form cues,ask_form,,augmented_template
+what is the form for squat and tell me the main form cues,ask_form,,augmented_template
+can you explain squat and tell me the main form cues I am not sure where to start and would appreciate a simple answer that fits my week.,ask_form,,augmented_template
+show me how to do squat and tell me the main form cues,ask_form,find_exercise,augmented_template
+how should i do squat and tell me the main form cues,ask_form,,augmented_template
+whats the safest way to do squat and tell me the main form cues,ask_form,,augmented_template
+walk me through squat and tell me the main form cues,ask_form,,augmented_template
+how do you do squat and tell me the main form cues I am not sure where to start and would appreciate a simple answer that fits my week.,ask_form,,augmented_template
+form check for squat and tell me the main form cues,ask_form,,augmented_template
+what are the cues for squat and tell me the main form cues,ask_form,,augmented_template
+how can i improve squat and tell me the main form cues,ask_form,,augmented_template
+what does good form look like for squat and tell me the main form cues I am not sure where to start and would appreciate a simple answer that fits my week.,ask_form,,augmented_template
+could you teach me squat and tell me the main form cues,ask_form,find_exercise,augmented_template
+tell me how to perform squat and tell me the main form cues,ask_form,,augmented_template
+how am i meant to do squat and tell me the main form cues,ask_form,,augmented_template
+can u explain squat and tell me the main form cues,ask_form,,augmented_template
+pls show me squat and tell me the main form cues I am not sure where to start and would appreciate a simple answer that fits my week.,ask_form,,augmented_template
+what should i focus on for squat and tell me the main form cues,ask_form,,augmented_template
+how do i set up squat and tell me the main form cues,ask_form,,augmented_template
+how should my form look for squat and tell me the main form cues,ask_form,,augmented_template
+can someone explain squat and tell me the main form cues I am not sure where to start and would appreciate a simple answer that fits my week.,ask_form,,augmented_template
+technique tips for squat and tell me the main form cues,ask_form,find_exercise,augmented_template
+how is this exersize done squat and tell me the main form cues,ask_form,,augmented_template
+what is a good setup for squat and tell me the main form cues,ask_form,,augmented_template
+help me learn squat and tell me the main form cues,ask_form,,augmented_template
+how do i correctly do squat and tell me the main form cues I am not sure where to start and would appreciate a simple answer that fits my week.,ask_form,,augmented_template
+how do i nail squat and tell me the main form cues,ask_form,,augmented_template
+explain the setup for squat and tell me the main form cues,ask_form,,augmented_template
+what cues help with squat and tell me the main form cues,ask_form,,augmented_template
+how do i perform deadlift and tell me the main form cues I am not sure where to start and would appreciate a simple answer that fits my week.,ask_form,,augmented_template
+what is the form for deadlift and tell me the main form cues,ask_form,find_exercise,augmented_template
+can you explain deadlift and tell me the main form cues,ask_form,,augmented_template
+show me how to do deadlift and tell me the main form cues,ask_form,,augmented_template
+how should i do deadlift and tell me the main form cues,ask_form,,augmented_template
+whats the safest way to do deadlift and tell me the main form cues I am not sure where to start and would appreciate a simple answer that fits my week.,ask_form,,augmented_template
+how do you do deadlift and tell me the main form cues,ask_form,,augmented_template
+i need help with deadlift and tell me the main form cues,ask_form,,augmented_template
+form check for deadlift and tell me the main form cues,ask_form,,augmented_template
+what are the cues for deadlift and tell me the main form cues I am not sure where to start and would appreciate a simple answer that fits my week.,ask_form,,augmented_template
+how can i improve deadlift and tell me the main form cues,ask_form,find_exercise,augmented_template
+what does good form look like for deadlift and tell me the main form cues,ask_form,,augmented_template
+could you teach me deadlift and tell me the main form cues,ask_form,,augmented_template
+tell me how to perform deadlift and tell me the main form cues,ask_form,,augmented_template
+how am i meant to do deadlift and tell me the main form cues I am not sure where to start and would appreciate a simple answer that fits my week.,ask_form,,augmented_template
+deadlift form,ask_form,,augmented_template
+pls show me deadlift and tell me the main form cues,ask_form,,augmented_template
+im confused about deadlift and tell me the main form cues,ask_form,,augmented_template
+what should i focus on for deadlift and tell me the main form cues,ask_form,,augmented_template
+how do i set up deadlift and tell me the main form cues I am not sure where to start and would appreciate a simple answer that fits my week.,ask_form,,augmented_template
+how should my form look for deadlift and tell me the main form cues,ask_form,find_exercise,augmented_template
+can someone explain deadlift and tell me the main form cues,ask_form,,augmented_template
+technique tips for deadlift and tell me the main form cues,ask_form,,augmented_template
+how is this exercise done deadlift and tell me the main form cues,ask_form,,augmented_template
+what is a good setup for deadlift and tell me the main form cues I am not sure where to start and would appreciate a simple answer that fits my week.,ask_form,,augmented_template
+how do i correctly do deadlift and tell me the main form cues,ask_form,,augmented_template
+what mistakes happen in deadlift and tell me the main form cues,ask_form,,augmented_template
+how do i nail deadlift and tell me the main form cues,ask_form,,augmented_template
+explain the setup for deadlift and tell me the main form cues I am not sure where to start and would appreciate a simple answer that fits my week.,ask_form,,augmented_template
+what cues help with deadlift and tell me the main form cues,ask_form,find_exercise,augmented_template
+how do i perform bench press and tell me the main form cues,ask_form,,augmented_template
+what is the form for bench press and tell me the main form cues,ask_form,,augmented_template
+can u explain bench press and tell me the main form cues,ask_form,,augmented_template
+show me how to do bench press and tell me the main form cues I am not sure where to start and would appreciate a simple answer that fits my week.,ask_form,,augmented_template
+whats the safest way to do bench press and tell me the main form cues,ask_form,,augmented_template
+walk me through bench press and tell me the main form cues,ask_form,,augmented_template
+how do you do bench press and tell me the main form cues,ask_form,,augmented_template
+i need help with bench press and tell me the main form cues I am not sure where to start and would appreciate a simple answer that fits my week.,ask_form,,augmented_template
+form check for bench press and tell me the main form cues,ask_form,find_exercise,augmented_template
+what are the cues for bench press and tell me the main form cues,ask_form,,augmented_template
+how can i improve bench press and tell me the main form cues,ask_form,,augmented_template
+what does good form look like for bench press and tell me the main form cues,ask_form,,augmented_template
+could you teach me bench press and tell me the main form cues I am not sure where to start and would appreciate a simple answer that fits my week.,ask_form,,augmented_template
+bench press form,ask_form,,augmented_template
+how am i meant to do bench press and tell me the main form cues,ask_form,,augmented_template
+pls show me bench press and tell me the main form cues,ask_form,,augmented_template
+im confused about bench press and tell me the main form cues I am not sure where to start and would appreciate a simple answer that fits my week.,ask_form,,augmented_template
+what should i focus on for bench press and tell me the main form cues,ask_form,find_exercise,augmented_template
+how do i set up bench press and tell me the main form cues,ask_form,,augmented_template
+how should my form look for bench press and tell me the main form cues,ask_form,,augmented_template
+can someone explain bench press and tell me the main form cues,ask_form,,augmented_template
+technique tips for bench press and tell me the main form cues I am not sure where to start and would appreciate a simple answer that fits my week.,ask_form,,augmented_template
+what is a good setup for bench press and tell me the main form cues,ask_form,,augmented_template
+post workout meal,get_nutrition,,augmented_template
+give me food ideas for bulk at a rest day; would salmon work and what should I eat after training,get_nutrition,,augmented_template
+how can i fuel bulk at a rest day; would salmon work and what should i eat after training,get_nutrition,,augmented_template
+what meals help with bulk at a rest day; would salmon work and what should I eat after training,get_nutrition,,augmented_template
+im trying to eat for bulk at a rest day; would salmon work and what should I eat after training I am not sure where to start and would appreciate a simple answer that fits my week.,get_nutrition,,augmented_template
+which foods support bulk at a rest day would salmon work and what should i eat after training,get_nutrition,generate_plan,augmented_template
+what are good foods for bulk at a rest day; would salmon work and what should I eat after training,get_nutrition,,augmented_template
+tell me about eating for bulk at a rest day; would salmon work and what should i eat after training,get_nutrition,,augmented_template
+can u suggest meals for bulk at a rest day; would salmon work and what should I eat after training,get_nutrition,,augmented_template
+what macros suit bulk at a rest day; would salmon work and what should I eat after training I am not sure where to start and would appreciate a simple answer that fits my week.,get_nutrition,,augmented_template
+meal ideas for bulk at a rest day; would salmon work and what should I eat after training,get_nutrition,,augmented_template
+what would you eat for bulk at a rest day; would salmon work and what should i eat after training,get_nutrition,,augmented_template
+help me plan food for bulk at a rest day; would salmon work and what should I eat after training,get_nutrition,,augmented_template
+is this good nutrition for bulk at a rest day; would salmon work and what should I eat after training I am not sure where to start and would appreciate a simple answer that fits my week.,get_nutrition,,augmented_template
+what should my diet look like for bulk at a rest day would salmon work and what should i eat after training,get_nutrition,generate_plan,augmented_template
+gym bro what do i eat for bulk at a rest day; would salmon work and what should I eat after training,get_nutrition,,augmented_template
+what foods are useful for bulk at a rest day; would salmon work and what should i eat after training,get_nutrition,,augmented_template
+can u give meal ideas for bulk at a rest day; would salmon work and what should I eat after training,get_nutrition,,augmented_template
+pls suggest food for bulk at a rest day; would salmon work and what should I eat after training I am not sure where to start and would appreciate a simple answer that fits my week.,get_nutrition,,augmented_template
+what can i have for bulk at a rest day; would salmon work and what should I eat after training,get_nutrition,,augmented_template
+what works as a meal for bulk at a rest day; would salmon work and what should i eat after training,get_nutrition,,augmented_template
+any food tips for bulk at a rest day; would salmon work and what should I eat after training,get_nutrition,,augmented_template
+im unsure what to eat for bulk at a rest day; would salmon work and what should I eat after training I am not sure where to start and would appreciate a simple answer that fits my week.,get_nutrition,,augmented_template
+what snacks help with bulk at a rest day would salmon work and what should i eat after training,get_nutrition,generate_plan,augmented_template
+what should i prep for bulk at a rest day; would salmon work and what should I eat after training,get_nutrition,,augmented_template
+help with meals for bulk at a rest day; would salmon work and what should i eat after training,get_nutrition,,augmented_template
+which food supports bulk at a rest day; would salmon work and what should I eat after training,get_nutrition,,augmented_template
+what do i eat when trying to bulk at a rest day; would salmon work and what should I eat after training I am not sure where to start and would appreciate a simple answer that fits my week.,get_nutrition,,augmented_template
+protein foods,get_nutrition,,augmented_template
+can you help with nutriton for bulk at a rest day; would salmon work and what should I eat after training,get_nutrition,,augmented_template
+what should i eat for cut at breakfast; would greek yogurt work and what should i eat after training,get_nutrition,,augmented_template
+give me food ideas for cut at breakfast; would Greek yogurt work and what should I eat after training,get_nutrition,,augmented_template
+how can i fuel cut at breakfast; would Greek yogurt work and what should I eat after training I am not sure where to start and would appreciate a simple answer that fits my week.,get_nutrition,,augmented_template
+what meals help with cut at breakfast would greek yogurt work and what should i eat after training,get_nutrition,generate_plan,augmented_template
+im trying to eat for cut at breakfast; would Greek yogurt work and what should I eat after training,get_nutrition,,augmented_template
+which foods support cut at breakfast; would greek yogurt work and what should i eat after training,get_nutrition,,augmented_template
+what are good foods for cut at breakfast; would Greek yogurt work and what should I eat after training,get_nutrition,,augmented_template
+tell me about eating for cut at breakfast; would Greek yogurt work and what should I eat after training I am not sure where to start and would appreciate a simple answer that fits my week.,get_nutrition,,augmented_template
+meal ideas,get_nutrition,,augmented_template
+what macros suit cut at breakfast; would Greek yogurt work and what should I eat after training,get_nutrition,,augmented_template
+how much protein for cut at breakfast; would greek yogurt work and what should i eat after training,get_nutrition,,augmented_template
+meal ideas for cut at breakfast; would Greek yogurt work and what should I eat after training,get_nutrition,,augmented_template
+what would you eat for cut at breakfast; would Greek yogurt work and what should I eat after training I am not sure where to start and would appreciate a simple answer that fits my week.,get_nutrition,,augmented_template
+help me plan food for cut at breakfast would greek yogurt work and what should i eat after training,get_nutrition,generate_plan,augmented_template
+is this good nutriton for cut at breakfast; would Greek yogurt work and what should I eat after training,get_nutrition,,augmented_template
+what should my diet look like for cut at breakfast; would greek yogurt work and what should i eat after training,get_nutrition,,augmented_template
+gym bro what do i eat for cut at breakfast; would Greek yogurt work and what should I eat after training,get_nutrition,,augmented_template
+what foods are useful for cut at breakfast; would Greek yogurt work and what should I eat after training I am not sure where to start and would appreciate a simple answer that fits my week.,get_nutrition,,augmented_template
+pls suggest food for cut at breakfast; would Greek yogurt work and what should I eat after training,get_nutrition,,augmented_template
+how should i fuel cut at breakfast; would greek yogurt work and what should i eat after training,get_nutrition,,augmented_template
+what can i have for cut at breakfast; would Greek yogurt work and what should I eat after training,get_nutrition,,augmented_template
+what works as a meal for cut at breakfast; would Greek yogurt work and what should I eat after training I am not sure where to start and would appreciate a simple answer that fits my week.,get_nutrition,,augmented_template
+any food tips for cut at breakfast would greek yogurt work and what should i eat after training,get_nutrition,generate_plan,augmented_template
+im unsure what to eat for cut at breakfast; would Greek yogurt work and what should I eat after training,get_nutrition,,augmented_template
+what snacks help with cut at breakfast; would greek yogurt work and what should i eat after training,get_nutrition,,augmented_template
+what should i prep for cut at breakfast; would Greek yogurt work and what should I eat after training,get_nutrition,,augmented_template
+help with meals for cut at breakfast; would Greek yogurt work and what should I eat after training I am not sure where to start and would appreciate a simple answer that fits my week.,get_nutrition,,augmented_template
+what do i eat when trying to cut at breakfast; would Greek yogurt work and what should I eat after training,get_nutrition,,augmented_template
+what is a good meal for cut at breakfast; would greek yogurt work and what should i eat after training,get_nutrition,,augmented_template
+can u help with nutrition for cut at breakfast; would Greek yogurt work and what should I eat after training,get_nutrition,,augmented_template
+what should i eat for conditioning at lunch; would a banana work and what should I eat after training I am not sure where to start and would appreciate a simple answer that fits my week.,get_nutrition,,augmented_template
+give me food ideas for conditioning at lunch would a banana work and what should i eat after training,get_nutrition,generate_plan,augmented_template
+how can i fuel conditioning at lunch; would a banana work and what should I eat after training,get_nutrition,,augmented_template
+what meals help with conditioning at lunch; would a banana work and what should i eat after training,get_nutrition,,augmented_template
+im trying to eat for conditioning at lunch; would a banana work and what should I eat after training,get_nutrition,,augmented_template
+which foods support conditioning at lunch; would a banana work and what should I eat after training I am not sure where to start and would appreciate a simple answer that fits my week.,get_nutrition,,augmented_template
+tell me about eating for conditioning at lunch; would a banana work and what should I eat after training,get_nutrition,,augmented_template
+can you suggest meals for conditioning at lunch; would a banana work and what should i eat after training,get_nutrition,,augmented_template
+what macros suit conditioning at lunch; would a banana work and what should I eat after training,get_nutrition,,augmented_template
+how much protein for conditioning at lunch; would a banana work and what should I eat after training I am not sure where to start and would appreciate a simple answer that fits my week.,get_nutrition,,augmented_template
+meal ideas for conditioning at lunch would a banana work and what should i eat after training,get_nutrition,generate_plan,augmented_template
+what would you eat for conditioning at lunch; would a banana work and what should I eat after training,get_nutrition,,augmented_template
+help me plan food for conditioning at lunch; would a banana work and what should i eat after training,get_nutrition,,augmented_template
+is this good nutrition for conditioning at lunch; would a banana work and what should I eat after training,get_nutrition,,augmented_template
+what should my diet look like for conditioning at lunch; would a banana work and what should I eat after training I am not sure where to start and would appreciate a simple answer that fits my week.,get_nutrition,,augmented_template
+what foods are useful for conditioning at lunch; would a banana work and what should I eat after training,get_nutrition,,augmented_template
+can u give meal ideas for conditioning at lunch; would a banana work and what should i eat after training,get_nutrition,,augmented_template
+pls suggest food for conditioning at lunch; would a banana work and what should I eat after training,get_nutrition,,augmented_template
+how should i fuel conditioning at lunch; would a banana work and what should I eat after training I am not sure where to start and would appreciate a simple answer that fits my week.,get_nutrition,,augmented_template
+what can i have for conditioning at lunch would a banana work and what should i eat after training,get_nutrition,generate_plan,augmented_template
+what works as a meal for conditioning at lunch; would a banana work and what should I eat after training,get_nutrition,,augmented_template
+any food tips for conditioning at lunch; would a banana work and what should i eat after training,get_nutrition,,augmented_template
+im unsure what to eat for conditioning at lunch; would a banana work and what should I eat after training,get_nutrition,,augmented_template
+what snacks help with conditioning at lunch; would a banana work and what should I eat after training I am not sure where to start and would appreciate a simple answer that fits my week.,get_nutrition,,augmented_template
+help with meals for conditioning at lunch; would a banana work and what should I eat after training,get_nutrition,,augmented_template
+which food supports conditioning at lunch; would a banana work and what should i eat after training,get_nutrition,,augmented_template
+what do i eat when trying to conditioning at lunch; would a banana work and what should I eat after training,get_nutrition,,augmented_template
+what is a good meal for conditioning at lunch; would a banana work and what should I eat after training I am not sure where to start and would appreciate a simple answer that fits my week.,get_nutrition,,augmented_template
+can you help with nutrition for conditioning at lunch would a banana work and what should i eat after training,get_nutrition,generate_plan,augmented_template
+what should i eat for build muscle at dinner; would beans work and what should I eat after training,get_nutrition,,augmented_template
+give me food ideas for build muscle at dinner; would beans work and what should i eat after training,get_nutrition,,augmented_template
+how can i fuel build muscle at dinner; would beans work and what should I eat after training,get_nutrition,,augmented_template
+what meals help with build muscle at dinner; would beans work and what should I eat after training I am not sure where to start and would appreciate a simple answer that fits my week.,get_nutrition,,augmented_template
+which foods support build muscle at dinner; would beans work and what should I eat after training,get_nutrition,,augmented_template
+what are good foods for build muscle at dinner; would beans work and what should i eat after training,get_nutrition,,augmented_template
+tell me about eating for build muscle at dinner; would beans work and what should I eat after training,get_nutrition,,augmented_template
+can you suggest meals for build muscle at dinner; would beans work and what should I eat after training I am not sure where to start and would appreciate a simple answer that fits my week.,get_nutrition,,augmented_template
+what macros suit build muscle at dinner would beans work and what should i eat after training,get_nutrition,generate_plan,augmented_template
+how much protein for build muscle at dinner; would beans work and what should I eat after training,get_nutrition,,augmented_template
+meal ideas for build muscle at dinner; would beans work and what should i eat after training,get_nutrition,,augmented_template
+what would you eat for build muscle at dinner; would beans work and what should I eat after training,get_nutrition,,augmented_template
+help me plan food for build muscle at dinner; would beans work and what should I eat after training I am not sure where to start and would appreciate a simple answer that fits my week.,get_nutrition,,augmented_template
+what should my diet look like for build muscle at dinner; would beans work and what should I eat after training,get_nutrition,,augmented_template
+gym bro what do i eat for build muscle at dinner; would beans work and what should i eat after training,get_nutrition,,augmented_template
+what foods are useful for build muscle at dinner; would beans work and what should I eat after training,get_nutrition,,augmented_template
+can u give meal ideas for build muscle at dinner; would beans work and what should I eat after training I am not sure where to start and would appreciate a simple answer that fits my week.,get_nutrition,,augmented_template
+pls suggest food for build muscle at dinner would beans work and what should i eat after training,get_nutrition,generate_plan,augmented_template
+how should i fuel build muscle at dinner; would beans work and what should I eat after training,get_nutrition,,augmented_template
+what can i have for build muscle at dinner; would beans work and what should i eat after training,get_nutrition,,augmented_template
+what works as a meal for build muscle at dinner; would beans work and what should I eat after training,get_nutrition,,augmented_template
+any food tips for build muscle at dinner; would beans work and what should I eat after training I am not sure where to start and would appreciate a simple answer that fits my week.,get_nutrition,,augmented_template
+what snacks help with build muscle at dinner; would beans work and what should I eat after training,get_nutrition,,augmented_template
+what should i prep for build muscle at dinner; would beans work and what should i eat after training,get_nutrition,,augmented_template
+help with meals for build muscle at dinner; would beans work and what should I eat after training,get_nutrition,,augmented_template
+which food supports build muscle at dinner; would beans work and what should I eat after training I am not sure where to start and would appreciate a simple answer that fits my week.,get_nutrition,,augmented_template
+what do i eat when trying to build muscle at dinner would beans work and what should i eat after training,get_nutrition,generate_plan,augmented_template
+what is a good meal for build muscle at dinner; would beans work and what should I eat after training,get_nutrition,,augmented_template
+can you help with nutrition for build muscle at dinner; would beans work and what should i eat after training,get_nutrition,,augmented_template
+what should i eat for lose weight at a snack; would a protein shake work and what should I eat after training,get_nutrition,,augmented_template
+give me food ideas for lose weight at a snack; would a protein shake work and what should I eat after training I am not sure where to start and would appreciate a simple answer that fits my week.,get_nutrition,,augmented_template
+what meals help with lose weight at a snack; would a protein shake work and what should I eat after training,get_nutrition,,augmented_template
+im trying to eat for lose weight at a snack; would a protein shake work and what should i eat after training,get_nutrition,,augmented_template
+which foods support lose weight at a snack; would a protein shake work and what should I eat after training,get_nutrition,,augmented_template
+what are good foods for lose weight at a snack; would a protein shake work and what should I eat after training I am not sure where to start and would appreciate a simple answer that fits my week.,get_nutrition,,augmented_template
+tell me about eating for lose weight at a snack would a protein shake work and what should i eat after training,get_nutrition,generate_plan,augmented_template
+can you suggest meals for lose weight at a snack; would a protein shake work and what should I eat after training,get_nutrition,,augmented_template
+what macros suit lose weight at a snack; would a protein shake work and what should i eat after training,get_nutrition,,augmented_template
+how much protein for lose weight at a snack; would a protein shake work and what should I eat after training,get_nutrition,,augmented_template
+meal ideas for lose weight at a snack; would a protein shake work and what should I eat after training I am not sure where to start and would appreciate a simple answer that fits my week.,get_nutrition,,augmented_template
+help me plan food for lose weight at a snack; would a protein shake work and what should I eat after training,get_nutrition,,augmented_template
+is this good nutrition for lose weight at a snack; would a protein shake work and what should i eat after training,get_nutrition,,augmented_template
+what should my diet look like for lose weight at a snack; would a protein shake work and what should I eat after training,get_nutrition,,augmented_template
+gym bro what do i eat for lose weight at a snack; would a protein shake work and what should I eat after training I am not sure where to start and would appreciate a simple answer that fits my week.,get_nutrition,,augmented_template
+what foods are useful for lose weight at a snack would a protein shake work and what should i eat after training,get_nutrition,generate_plan,augmented_template
+can u give meal ideas for lose weight at a snack; would a protein shake work and what should I eat after training,get_nutrition,,augmented_template
+pls suggest food for lose weight at a snack; would a protein shake work and what should i eat after training,get_nutrition,,augmented_template
+how should i fuel lose weight at a snack; would a protein shake work and what should I eat after training,get_nutrition,,augmented_template
+what can i have for lose weight at a snack; would a protein shake work and what should I eat after training I am not sure where to start and would appreciate a simple answer that fits my week.,get_nutrition,,augmented_template
+any food tips for lose weight at a snack; would a protein shake work and what should I eat after training,get_nutrition,,augmented_template
+im unsure what to eat for lose weight at a snack; would a protein shake work and what should i eat after training,get_nutrition,,augmented_template
+what snacks help with lose weight at a snack; would a protein shake work and what should I eat after training,get_nutrition,,augmented_template
+what should i prep for lose weight at a snack; would a protein shake work and what should I eat after training I am not sure where to start and would appreciate a simple answer that fits my week.,get_nutrition,,augmented_template
+help with meals for lose weight at a snack would a protein shake work and what should i eat after training,get_nutrition,generate_plan,augmented_template
+which food supports lose weight at a snack; would a protein shake work and what should I eat after training,get_nutrition,,augmented_template
+what do i eat when trying to lose weight at a snack; would a protein shake work and what should i eat after training,get_nutrition,,augmented_template
+what is a good meal for lose weight at a snack; would a protein shake work and what should I eat after training,get_nutrition,,augmented_template
+can you help with nutrition for lose weight at a snack; would a protein shake work and what should I eat after training I am not sure where to start and would appreciate a simple answer that fits my week.,get_nutrition,,augmented_template
+give me food ideas for get stronger at pre-workuot; would oats work and what should I eat after training,get_nutrition,,augmented_template
+how can i fuel get stronger at pre-workout; would oats work and what should i eat after training,get_nutrition,,augmented_template
+what meals help with get stronger at pre-wo; would oats work and what should I eat after training,get_nutrition,,augmented_template
+did tricep dip,log_progress,,augmented_template
+i knocked out tricep dip: 3 sets of 10 reps with a barbell and a 30 minute session,log_progress,,augmented_template
+i got my tricep dip: 3 sets of 10 reps with a barbell and a 30 minute session,log_progress,,augmented_template
+finished a tricep dip: 3 sets of 10 reps with a barbell and a 30 minute session,log_progress,,augmented_template
+done with tricep dip: 3 sets of 10 reps with a barbell and a 30 minute session I am not sure where to start and would appreciate a simple answer that fits my week.,log_progress,,augmented_template
+just completed tricep dip 3 sets of 10 reps with a barbell and a 30 minute session,log_progress,motivation,augmented_template
+for my record i did tricep dip: 3 sets of 10 reps with a barbell and a 30 minute session,log_progress,,augmented_template
+today i did tricep dip: 3 sets of 10 reps with a barbell and a 30 minute session,log_progress,,augmented_template
+yesterday i did tricep dip: 3 sets of 10 reps with a barbell and a 30 minute session,log_progress,,augmented_template
+this morning i did tricep dip: 3 sets of 10 reps with a barbell and a 30 minute session I am not sure where to start and would appreciate a simple answer that fits my week.,log_progress,,augmented_template
+finished workout,log_progress,,augmented_template
+no time word i did tricep dip: 3 sets of 10 reps with a barbell and a 30 minute session,log_progress,,augmented_template
+gym bro log tricep dip: 3 sets of 10 reps with a barbell and a 30 minute session,log_progress,,augmented_template
+quick log tricep dip: 3 sets of 10 reps with a barbell and a 30 minute session,log_progress,,augmented_template
+record my tricep dip: 3 sets of 10 reps with a barbell and a 30 minute session I am not sure where to start and would appreciate a simple answer that fits my week.,log_progress,,augmented_template
+can you track tricep dip 3 sets of 10 reps with a barbell and a 30 minute session,log_progress,motivation,augmented_template
+i completed hip thrust: 3 sets of 10 reps with a kettlebell and a 30 minute session,log_progress,,augmented_template
+i finished hip thrust: 3 sets of 10 reps with a kettlebell and a 30 minute session,log_progress,,augmented_template
+log this hip thrust: 3 sets of 10 reps with a kettlebell and a 30 minute session,log_progress,,augmented_template
+record that i did hip thrust: 3 sets of 10 reps with a kettlebell and a 30 minute session I am not sure where to start and would appreciate a simple answer that fits my week.,log_progress,,augmented_template
+my workuot was hip thrust: 3 sets of 10 reps with a kettlebell and a 30 minute session,log_progress,,augmented_template
+i managed hip thrust: 3 sets of 10 reps with a kettlebell and a 30 minute session,log_progress,,augmented_template
+i got through hip thrust: 3 sets of 10 reps with a kettlebell and a 30 minute session,log_progress,,augmented_template
+please note hip thrust: 3 sets of 10 reps with a kettlebell and a 30 minute session I am not sure where to start and would appreciate a simple answer that fits my week.,log_progress,,augmented_template
+save my hip thrust 3 sets of 10 reps with a kettlebell and a 30 minute session,log_progress,motivation,augmented_template
+i hit hip thrust: 3 sets of 10 reps with a kettlebell and a 30 minute session,log_progress,,augmented_template
+i achieved hip thrust: 3 sets of 10 reps with a kettlebell and a 30 minute session,log_progress,,augmented_template
+mark down hip thrust: 3 sets of 10 reps with a kettlebell and a 30 minute session,log_progress,,augmented_template
+i trained hip thrust: 3 sets of 10 reps with a kettlebell and a 30 minute session I am not sure where to start and would appreciate a simple answer that fits my week.,log_progress,,augmented_template
+log my sets,log_progress,,augmented_template
+i lifted hip thrust: 3 sets of 10 reps with a kettlebell and a 30 minute session,log_progress,,augmented_template
+i ran hip thrust: 3 sets of 10 reps with a kettlebell and a 30 minute session,log_progress,,augmented_template
+i walked hip thrust: 3 sets of 10 reps with a kettlebell and a 30 minute session,log_progress,,augmented_template
+i knocked out hip thrust: 3 sets of 10 reps with a kettlebell and a 30 minute session I am not sure where to start and would appreciate a simple answer that fits my week.,log_progress,,augmented_template
+i got my hip thrust 3 sets of 10 reps with a kettlebell and a 30 minute session,log_progress,motivation,augmented_template
+finished a hip thrust: 3 sets of 10 reps with a kettlebell and a 30 minute session,log_progress,,augmented_template
+done with hip thrust: 3 sets of 10 reps with a kettlebell and a 30 minute session,log_progress,,augmented_template
+just completed hip thrust: 3 sets of 10 reps with a kettlebell and a 30 minute session,log_progress,,augmented_template
+for my record i did hip thrust: 3 sets of 10 reps with a kettlebell and a 30 minute session I am not sure where to start and would appreciate a simple answer that fits my week.,log_progress,,augmented_template
+yesterday i did hip thrust: 3 sets of 10 reps with a kettlebell and a 30 minute session,log_progress,,augmented_template
+this morning i did hip thrust: 3 sets of 10 reps with a kettlebell and a 30 minute session,log_progress,,augmented_template
+last night i did hip thrust: 3 sets of 10 reps with a kettlebell and a 30 minute session,log_progress,,augmented_template
+no time word i did hip thrust: 3 sets of 10 reps with a kettlebell and a 30 minute session I am not sure where to start and would appreciate a simple answer that fits my week.,log_progress,,augmented_template
+gym bro log hip thrust 3 sets of 10 reps with a kettlebell and a 30 minute session,log_progress,motivation,augmented_template
+quick log hip thrust: 3 sets of 10 reps with a kettlebell and a 30 minute session,log_progress,,augmented_template
+record my hip thrust: 3 sets of 10 reps with a kettlebell and a 30 minute session,log_progress,,augmented_template
+can u track hip thrust: 3 sets of 10 reps with a kettlebell and a 30 minute session,log_progress,,augmented_template
+i completed glute bridge: 3 sets of 10 reps with resistance bands and a 30 minute session I am not sure where to start and would appreciate a simple answer that fits my week.,log_progress,,augmented_template
+did glute bridge,log_progress,,augmented_template
+log this glute bridge: 3 sets of 10 reps with resistance bands and a 30 minute session,log_progress,,augmented_template
+record that i did glute bridge: 3 sets of 10 reps with resistance bands and a 30 minute session,log_progress,,augmented_template
+just did glute bridge: 3 sets of 10 reps with resistance bands and a 30 minute session,log_progress,,augmented_template
+my workout was glute bridge: 3 sets of 10 reps with resistance bands and a 30 minute session I am not sure where to start and would appreciate a simple answer that fits my week.,log_progress,,augmented_template
+i managed glute bridge 3 sets of 10 reps with resistance bands and a 30 minute session,log_progress,motivation,augmented_template
+i got through glute bridge: 3 sets of 10 reps with resistance bands and a 30 minute session,log_progress,,augmented_template
+please note glute bridge: 3 sets of 10 reps with resistance bands and a 30 minute session,log_progress,,augmented_template
+save my glute bridge: 3 sets of 10 reps with resistance bands and a 30 minute session,log_progress,,augmented_template
+i hit glute bridge: 3 sets of 10 reps with resistance bands and a 30 minute session I am not sure where to start and would appreciate a simple answer that fits my week.,log_progress,,augmented_template
+mark down glute bridge: 3 sets of 10 reps with resistance bands and a 30 minute session,log_progress,,augmented_template
+i trained glute bridge: 3 sets of 10 reps with resistance bands and a 30 minute session,log_progress,,augmented_template
+my session included glute bridge: 3 sets of 10 reps with resistance bands and a 30 minute session,log_progress,,augmented_template
+i lifted glute bridge: 3 sets of 10 reps with resistance bands and a 30 minute session I am not sure where to start and would appreciate a simple answer that fits my week.,log_progress,,augmented_template
+i ran glute bridge 3 sets of 10 reps with resistance bands and a 30 minute session,log_progress,motivation,augmented_template
+i walked glute bridge: 3 sets of 10 reps with resistance bands and a 30 minute session,log_progress,,augmented_template
+i knocked out glute bridge: 3 sets of 10 reps with resistance bands and a 30 minute session,log_progress,,augmented_template
+i got my glute bridge: 3 sets of 10 reps with resistance bands and a 30 minute session,log_progress,,augmented_template
+finished a glute bridge: 3 sets of 10 reps with resistance bands and a 30 minute session I am not sure where to start and would appreciate a simple answer that fits my week.,log_progress,,augmented_template
+just completed glute bridge: 3 sets of 10 reps with resistance bands and a 30 minute session,log_progress,,augmented_template
+for my record i did glute bridge: 3 sets of 10 reps with resistance bands and a 30 minute session,log_progress,,augmented_template
+today i did glute bridge: 3 sets of 10 reps with resistance bands and a 30 minute session,log_progress,,augmented_template
+yesterday i did glute bridge: 3 sets of 10 reps with resistance bands and a 30 minute session I am not sure where to start and would appreciate a simple answer that fits my week.,log_progress,,augmented_template
+this morning i did glute bridge 3 sets of 10 reps with resistance bands and a 30 minute session,log_progress,motivation,augmented_template
+last night i did glute bridge: 3 sets of 10 reps with resistance bands and a 30 minute session,log_progress,,augmented_template
+no time word i did glute bridge: 3 sets of 10 reps with resistance bands and a 30 minute session,log_progress,,augmented_template
+gym bro log glute bridge: 3 sets of 10 reps with resistance bands and a 30 minute session,log_progress,,augmented_template
+quick log glute bridge: 3 sets of 10 reps with resistance bands and a 30 minute session I am not sure where to start and would appreciate a simple answer that fits my week.,log_progress,,augmented_template
+can you track glute bridge: 3 sets of 10 reps with resistance bands and a 30 minute session,log_progress,,augmented_template
+i completed calf raise: 3 sets of 10 reps with bodyweight and a 30 minute session,log_progress,,augmented_template
+i finished calf raise: 3 sets of 10 reps with bodyweight and a 30 minute session,log_progress,,augmented_template
+log this calf raise: 3 sets of 10 reps with bodyweight and a 30 minute session I am not sure where to start and would appreciate a simple answer that fits my week.,log_progress,,augmented_template
+record that i did calf raise 3 sets of 10 reps with bodyweight and a 30 minute session,log_progress,motivation,augmented_template
+just did calf raise: 3 sets of 10 reps with bodyweight and a 30 minute session,log_progress,,augmented_template
+my workout was calf raise: 3 sets of 10 reps with bodyweight and a 30 minute session,log_progress,,augmented_template
+i managed calf raise: 3 sets of 10 reps with bodyweight and a 30 minute session,log_progress,,augmented_template
+i got through calf raise: 3 sets of 10 reps with bodyweight and a 30 minute session I am not sure where to start and would appreciate a simple answer that fits my week.,log_progress,,augmented_template
+save my calf raise: 3 sets of 10 reps with bodyweight and a 30 minute session,log_progress,,augmented_template
+i hit calf raise: 3 sets of 10 reps with bodyweight and a 30 minute session,log_progress,,augmented_template
+i achieved calf raise: 3 sets of 10 reps with bodyweight and a 30 minute session,log_progress,,augmented_template
+mark down calf raise: 3 sets of 10 reps with bodyweight and a 30 minute session I am not sure where to start and would appreciate a simple answer that fits my week.,log_progress,,augmented_template
+i trained calf raise 3 sets of 10 reps with bodyweight and a 30 minute session,log_progress,motivation,augmented_template
+my session included calf raise: 3 sets of 10 reps with bodyweight and a 30 minute session,log_progress,,augmented_template
+i lifted calf raise: 3 sets of 10 reps with bodyweight and a 30 minute session,log_progress,,augmented_template
+i ran calf raise: 3 sets of 10 reps with bodyweight and a 30 minute session,log_progress,,augmented_template
+i walked calf raise: 3 sets of 10 reps with bodyweight and a 30 minute session I am not sure where to start and would appreciate a simple answer that fits my week.,log_progress,,augmented_template
+i got my calf raise: 3 sets of 10 reps with bodyweight and a 30 minute session,log_progress,,augmented_template
+finished a calf raise: 3 sets of 10 reps with bodyweight and a 30 minute session,log_progress,,augmented_template
+done with calf raise: 3 sets of 10 reps with bodyweight and a 30 minute session,log_progress,,augmented_template
+just completed calf raise: 3 sets of 10 reps with bodyweight and a 30 minute session I am not sure where to start and would appreciate a simple answer that fits my week.,log_progress,,augmented_template
+for my record i did calf raise 3 sets of 10 reps with bodyweight and a 30 minute session,log_progress,motivation,augmented_template
+today i did calf raise: 3 sets of 10 reps with bodyweight and a 30 minute session,log_progress,,augmented_template
+yesterday i did calf raise: 3 sets of 10 reps with bodyweight and a 30 minute session,log_progress,,augmented_template
+this morning i did calf raise: 3 sets of 10 reps with bodyweight and a 30 minute session,log_progress,,augmented_template
+last night i did calf raise: 3 sets of 10 reps with bodyweight and a 30 minute session I am not sure where to start and would appreciate a simple answer that fits my week.,log_progress,,augmented_template
+gym bro log calf raise: 3 sets of 10 reps with bodyweight and a 30 minute session,log_progress,,augmented_template
+quick log calf raise: 3 sets of 10 reps with bodyweight and a 30 minute session,log_progress,,augmented_template
+record my calf raise: 3 sets of 10 reps with bodyweight and a 30 minute session,log_progress,,augmented_template
+can you track calf raise: 3 sets of 10 reps with bodyweight and a 30 minute session I am not sure where to start and would appreciate a simple answer that fits my week.,log_progress,,augmented_template
+i completed burpee 3 sets of 10 reps with no equipment and a 30 minute session,log_progress,motivation,augmented_template
+i finished burpee: 3 sets of 10 reps with no equipment and a 30 minute session,log_progress,,augmented_template
+log this burpee: 3 sets of 10 reps with no equipment and a 30 minute session,log_progress,,augmented_template
+record that i did burpee: 3 sets of 10 reps with no equipment and a 30 minute session,log_progress,,augmented_template
+just did burpee: 3 sets of 10 reps with no equipment and a 30 minute session I am not sure where to start and would appreciate a simple answer that fits my week.,log_progress,,augmented_template
+i managed burpee: 3 sets of 10 reps with no equipment and a 30 minute session,log_progress,,augmented_template
+i got through burpee: 3 sets of 10 reps with no equipment and a 30 minute session,log_progress,,augmented_template
+pls note burpee: 3 sets of 10 reps with no equipment and a 30 minute session,log_progress,,augmented_template
+save my burpee: 3 sets of 10 reps with no equipment and a 30 minute session I am not sure where to start and would appreciate a simple answer that fits my week.,log_progress,,augmented_template
+i hit burpee 3 sets of 10 reps with no equipment and a 30 minute session,log_progress,motivation,augmented_template
+i achieved burpee: 3 sets of 10 reps with no equipment and a 30 minute session,log_progress,,augmented_template
+mark down burpee: 3 sets of 10 reps with no equipment and a 30 minute session,log_progress,,augmented_template
+i trained burpee: 3 sets of 10 reps with no equipment and a 30 minute session,log_progress,,augmented_template
+my session included burpee: 3 sets of 10 reps with no equipment and a 30 minute session I am not sure where to start and would appreciate a simple answer that fits my week.,log_progress,,augmented_template
+i ran burpee: 3 sets of 10 reps with no equipment and a 30 minute session,log_progress,,augmented_template
+i walked burpee: 3 sets of 10 reps with no equipment and a 30 minute session,log_progress,,augmented_template
+i knocked out burpee: 3 sets of 10 reps with no equipment and a 30 minute session,log_progress,,augmented_template
+i got my burpee: 3 sets of 10 reps with no equipment and a 30 minute session I am not sure where to start and would appreciate a simple answer that fits my week.,log_progress,,augmented_template
+finished a burpee 3 sets of 10 reps with no equipment and a 30 minute session,log_progress,motivation,augmented_template
+done with burpee: 3 sets of 10 reps with no equipment and a 30 minute session,log_progress,,augmented_template
+just completed burpee: 3 sets of 10 reps with no equipment and a 30 minute session,log_progress,,augmented_template
+for my record i did burpee: 3 sets of 10 reps with no equipment and a 30 minute session,log_progress,,augmented_template
+today i did burpee: 3 sets of 10 reps with no equipment and a 30 minute session I am not sure where to start and would appreciate a simple answer that fits my week.,log_progress,,augmented_template
+did burpee,log_progress,,augmented_template
+this morning i did burpee: 3 sets of 10 reps with no equipment and a 30 minute session,log_progress,,augmented_template
+last night i did burpee: 3 sets of 10 reps with no equipment and a 30 minute session,log_progress,,augmented_template
+no time word i did burpee: 3 sets of 10 reps with no equipment and a 30 minute session,log_progress,,augmented_template
+gym bro log burpee: 3 sets of 10 reps with no equipment and a 30 minute session I am not sure where to start and would appreciate a simple answer that fits my week.,log_progress,,augmented_template
+quick log burpee 3 sets of 10 reps with no equipment and a 30 minute session,log_progress,motivation,augmented_template
+record my burpee: 3 sets of 10 reps with no equipment and a 30 minute session,log_progress,,augmented_template
+can you track burpee: 3 sets of 10 reps with no equipment and a 30 minute session,log_progress,,augmented_template
+i completed squat: 3 sets of 10 reps with home equipment and a 30 minute session,log_progress,,augmented_template
+i finished squat: 3 sets of 10 reps with home equipment and a 30 minute session I am not sure where to start and would appreciate a simple answer that fits my week.,log_progress,,augmented_template
+record that i did squat: 3 sets of 10 reps with home equipment and a 30 minute session,log_progress,,augmented_template
+just did squat: 3 sets of 10 reps with home equipment and a 30 minute session,log_progress,,augmented_template
+my wo was squat: 3 sets of 10 reps with home equipment and a 30 minute session,log_progress,,augmented_template
+i managed squat: 3 sets of 10 reps with home equipment and a 30 minute session I am not sure where to start and would appreciate a simple answer that fits my week.,log_progress,,augmented_template
+i got through squat 3 sets of 10 reps with home equipment and a 30 minute session,log_progress,motivation,augmented_template
+please note squat: 3 sets of 10 reps with home equipment and a 30 minute session,log_progress,,augmented_template
+save my squat: 3 sets of 10 reps with home equipment and a 30 minute session,log_progress,,augmented_template
+i hit squat: 3 sets of 10 reps with home equipment and a 30 minute session,log_progress,,augmented_template
+i achieved squat: 3 sets of 10 reps with home equipment and a 30 minute session I am not sure where to start and would appreciate a simple answer that fits my week.,log_progress,,augmented_template
+i trained squat: 3 sets of 10 reps with home equipment and a 30 minute session,log_progress,,augmented_template
+feeling stuck,motivation,,augmented_template
+why cant i improve endurance; I keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+starting again and improve endurance; i keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+gym bro i need improve endurance; I keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+can u hype me improve endurance; I keep skipping sessions and need a realistic way to begin I am not sure where to start and would appreciate a simple answer that fits my week.,motivation,,augmented_template
+pls encourage improve endurance i keep skipping sessions and need a realistic way to begin,motivation,generate_plan,augmented_template
+i need help staying improve endurance; I keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+what can keep me improve endurance; i keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+im tempted to skip improve endurance; I keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+help me get improve endurance; I keep skipping sessions and need a realistic way to begin I am not sure where to start and would appreciate a simple answer that fits my week.,motivation,,augmented_template
+how can i restart improve endurance; I keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+i need support improve endurance; i keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+my motivation is improve endurance; I keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+im finding it hard improve endurance; I keep skipping sessions and need a realistic way to begin I am not sure where to start and would appreciate a simple answer that fits my week.,motivation,,augmented_template
+give me a reason improve endurance i keep skipping sessions and need a realistic way to begin,motivation,generate_plan,augmented_template
+i feel general fitness; I keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+help me general fitness; i keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+give me general fitness; I keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+motivate me general fitness; I keep skipping sessions and need a realistic way to begin I am not sure where to start and would appreciate a simple answer that fits my week.,motivation,,augmented_template
+im struggling general fitness; I keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+can you keep me general fitness; i keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+i want to stay general fitness; I keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+how do i stay general fitness; I keep skipping sessions and need a realistic way to begin I am not sure where to start and would appreciate a simple answer that fits my week.,motivation,,augmented_template
+im losing general fitness i keep skipping sessions and need a realistic way to begin,motivation,generate_plan,augmented_template
+say something to general fitness; I keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+i need a push general fitness; i keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+fitness is hard and general fitness; I keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+i keep general fitness; I keep skipping sessions and need a realistic way to begin I am not sure where to start and would appreciate a simple answer that fits my week.,motivation,,augmented_template
+motivate me,motivation,,augmented_template
+could you encourage general fitness; I keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+please motivate general fitness; i keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+why cant i general fitness; I keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+starting again and general fitness; I keep skipping sessions and need a realistic way to begin I am not sure where to start and would appreciate a simple answer that fits my week.,motivation,,augmented_template
+gym bro i need general fitness i keep skipping sessions and need a realistic way to begin,motivation,generate_plan,augmented_template
+can u hype me general fitness; I keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+pls encourage general fitness; i keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+i need help staying general fitness; I keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+what can keep me general fitness; I keep skipping sessions and need a realistic way to begin I am not sure where to start and would appreciate a simple answer that fits my week.,motivation,,augmented_template
+help me get general fitness; I keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+i want consistency general fitness; i keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+how can i restart general fitness; I keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+i need support general fitness; I keep skipping sessions and need a realistic way to begin I am not sure where to start and would appreciate a simple answer that fits my week.,motivation,,augmented_template
+my motivation is general fitness i keep skipping sessions and need a realistic way to begin,motivation,generate_plan,augmented_template
+im finding it hard general fitness; I keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+give me a reason general fitness; i keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+i feel bulk; I keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+help me bulk; I keep skipping sessions and need a realistic way to begin I am not sure where to start and would appreciate a simple answer that fits my week.,motivation,,augmented_template
+motivate me bulk; I keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+i need encouragement bulk; i keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+im struggling bulk; I keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+can you keep me bulk; I keep skipping sessions and need a realistic way to begin I am not sure where to start and would appreciate a simple answer that fits my week.,motivation,,augmented_template
+i want to stay bulk i keep skipping sessions and need a realistic way to begin,motivation,generate_plan,augmented_template
+how do i stay bulk; I keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+im losing bulk; i keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+say something to bulk; I keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+i need a push bulk; I keep skipping sessions and need a realistic way to begin I am not sure where to start and would appreciate a simple answer that fits my week.,motivation,,augmented_template
+i keep bulk; I keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+im not feeling bulk; i keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+could you encourage bulk; I keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+please motivate bulk; I keep skipping sessions and need a realistic way to begin I am not sure where to start and would appreciate a simple answer that fits my week.,motivation,,augmented_template
+why cant i bulk i keep skipping sessions and need a realistic way to begin,motivation,generate_plan,augmented_template
+starting again and bulk; I keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+gym bro i need bulk; i keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+can u hype me bulk; I keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+pls encourage bulk; I keep skipping sessions and need a realistic way to begin I am not sure where to start and would appreciate a simple answer that fits my week.,motivation,,augmented_template
+what can keep me bulk; I keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+im tempted to skip bulk; i keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+help me get bulk; I keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+i want consistency bulk; I keep skipping sessions and need a realistic way to begin I am not sure where to start and would appreciate a simple answer that fits my week.,motivation,,augmented_template
+how can i restart bulk i keep skipping sessions and need a realistic way to begin,motivation,generate_plan,augmented_template
+i need support bulk; I keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+my motivation is bulk; i keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+im finding it hard bulk; I keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+give me a reason bulk; I keep skipping sessions and need a realistic way to begin I am not sure where to start and would appreciate a simple answer that fits my week.,motivation,,augmented_template
+help me cut; I keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+give me cut; i keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+motivate me cut; I keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+i need encouragement cut; I keep skipping sessions and need a realistic way to begin I am not sure where to start and would appreciate a simple answer that fits my week.,motivation,,augmented_template
+im struggling cut i keep skipping sessions and need a realistic way to begin,motivation,generate_plan,augmented_template
+can you keep me cut; I keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+i want to stay cut; i keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+how do i stay cut; I keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+im losing cut; I keep skipping sessions and need a realistic way to begin I am not sure where to start and would appreciate a simple answer that fits my week.,motivation,,augmented_template
+i need a push cut; I keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+fitness is hard and cut; i keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+i keep cut; I keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+im not feeling cut; I keep skipping sessions and need a realistic way to begin I am not sure where to start and would appreciate a simple answer that fits my week.,motivation,,augmented_template
+could you encourage cut i keep skipping sessions and need a realistic way to begin,motivation,generate_plan,augmented_template
+please motivate cut; I keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+why cant i cut; i keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+starting again and cut; I keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+gym bro i need cut; I keep skipping sessions and need a realistic way to begin I am not sure where to start and would appreciate a simple answer that fits my week.,motivation,,augmented_template
+need a push,motivation,,augmented_template
+pls encourage cut; I keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+i need help staying cut; i keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+what can keep me cut; I keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+im tempted to skip cut; I keep skipping sessions and need a realistic way to begin I am not sure where to start and would appreciate a simple answer that fits my week.,motivation,,augmented_template
+help me get cut i keep skipping sessions and need a realistic way to begin,motivation,generate_plan,augmented_template
+i want consistency cut; I keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+how can i restart cut; i keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+i need support cut; I keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+my motivation is cut; I keep skipping sessions and need a realistic way to begin I am not sure where to start and would appreciate a simple answer that fits my week.,motivation,,augmented_template
+give me a reason cut; I keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+i feel conditioning; i keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+help me conditioning; I keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+give me conditioning; I keep skipping sessions and need a realistic way to begin I am not sure where to start and would appreciate a simple answer that fits my week.,motivation,,augmented_template
+motivate me conditioning i keep skipping sessions and need a realistic way to begin,motivation,generate_plan,augmented_template
+i need encouragement conditioning; I keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+im struggling conditioning; i keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+can u keep me conditioning; I keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+i want to stay conditioning; I keep skipping sessions and need a realistic way to begin I am not sure where to start and would appreciate a simple answer that fits my week.,motivation,,augmented_template
+im losing conditioning; I keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+say something to conditioning; i keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+i need a push conditioning; I keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+fitness is hard and conditioning; I keep skipping sessions and need a realistic way to begin I am not sure where to start and would appreciate a simple answer that fits my week.,motivation,,augmented_template
+i keep conditioning i keep skipping sessions and need a realistic way to begin,motivation,generate_plan,augmented_template
+im not feeling conditioning; I keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+could you encourage conditioning; i keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+pls motivate conditioning; I keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+why cant i conditioning; I keep skipping sessions and need a realistic way to begin I am not sure where to start and would appreciate a simple answer that fits my week.,motivation,,augmented_template
+gym bro i need conditioning; I keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+can u hype me conditioning; i keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+pls encourage conditioning; I keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+i need help staying conditioning; I keep skipping sessions and need a realistic way to begin I am not sure where to start and would appreciate a simple answer that fits my week.,motivation,,augmented_template
+what can keep me conditioning i keep skipping sessions and need a realistic way to begin,motivation,generate_plan,augmented_template
+im tempted to skip conditioning; I keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+help me get conditioning; i keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+i want consistency conditioning; I keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+how can i restart conditioning; I keep skipping sessions and need a realistic way to begin I am not sure where to start and would appreciate a simple answer that fits my week.,motivation,,augmented_template
+my motivation is conditioning; I keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+im finding it hard conditioning; i keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+give me a reason conditioning; I keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+i feel build muscle; I keep skipping sessions and need a realistic way to begin I am not sure where to start and would appreciate a simple answer that fits my week.,motivation,,augmented_template
+help me build muscle i keep skipping sessions and need a realistic way to begin,motivation,generate_plan,augmented_template
+give me build muscle; I keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+motivate me build muscle; i keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+i need encouragement build muscle; I keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+im struggling build muscle; I keep skipping sessions and need a realistic way to begin I am not sure where to start and would appreciate a simple answer that fits my week.,motivation,,augmented_template
+i want to stay build muscle; I keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+how do i stay build muscle; i keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+im losing build muscle; I keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+say something to build muscle; I keep skipping sessions and need a realistic way to begin I am not sure where to start and would appreciate a simple answer that fits my week.,motivation,,augmented_template
+i need a push build muscle i keep skipping sessions and need a realistic way to begin,motivation,generate_plan,augmented_template
+fitness is hard and build muscle; I keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+i keep build muscle; i keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+im not feeling build muscle; I keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+could you encourage build muscle; I keep skipping sessions and need a realistic way to begin I am not sure where to start and would appreciate a simple answer that fits my week.,motivation,,augmented_template
+why cant i build muscle; I keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+starting again and build muscle; i keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+gym bro i need build muscle; I keep skipping sessions and need a realistic way to begin,motivation,,augmented_template
+feel dizzy,medical_or_injury,,augmented_template
+pls diagnose knee pain after bench press; should I keep training or seek medical advice,medical_or_injury,,augmented_template
+sore after knee pain after bench press; should i keep training or seek medical advice,medical_or_injury,,augmented_template
+numb during knee pain after bench press; should I keep training or seek medical advice,medical_or_injury,,augmented_template
+dizzy while knee pain after bench press; should I keep training or seek medical advice I am not sure where to start and would appreciate a simple answer that fits my week.,medical_or_injury,,augmented_template
+what is wrong with knee pain after bench press should i keep training or seek medical advice,medical_or_injury,ask_form,augmented_template
+do these symptoms knee pain after bench press; should I keep training or seek medical advice,medical_or_injury,,augmented_template
+is this concerning knee pain after bench press; should i keep training or seek medical advice,medical_or_injury,,augmented_template
+my knee pain after overhead press; should I keep training or seek medical advice,medical_or_injury,,augmented_template
+i have knee pain after overhead press; should I keep training or seek medical advice I am not sure where to start and would appreciate a simple answer that fits my week.,medical_or_injury,,augmented_template
+can you diagnose knee pain after overhead press; should I keep training or seek medical advice,medical_or_injury,,augmented_template
+what do i do about knee pain after overhead press; should i keep training or seek medical advice,medical_or_injury,,augmented_template
+is it safe with knee pain after overhead press; should I keep training or seek medical advice,medical_or_injury,,augmented_template
+i feel knee pain after overhead press; should I keep training or seek medical advice I am not sure where to start and would appreciate a simple answer that fits my week.,medical_or_injury,,augmented_template
+im experiencing knee pain after overhead press should i keep training or seek medical advice,medical_or_injury,ask_form,augmented_template
+could this be knee pain after overhead press; should I keep training or seek medical advice,medical_or_injury,,augmented_template
+do i need clearance for knee pain after overhead press; should i keep training or seek medical advice,medical_or_injury,,augmented_template
+what medicine for knee pain after overhead press; should I keep training or seek medical advice,medical_or_injury,,augmented_template
+my doctor said knee pain after overhead press; should I keep training or seek medical advice I am not sure where to start and would appreciate a simple answer that fits my week.,medical_or_injury,,augmented_template
+knee pain,medical_or_injury,,augmented_template
+pain started in knee pain after overhead press; should I keep training or seek medical advice,medical_or_injury,,augmented_template
+i am worried about knee pain after overhead press; should i keep training or seek medical advice,medical_or_injury,,augmented_template
+can i exercise with knee pain after overhead press; should I keep training or seek medical advice,medical_or_injury,,augmented_template
+what treatment for knee pain after overhead press; should I keep training or seek medical advice I am not sure where to start and would appreciate a simple answer that fits my week.,medical_or_injury,,augmented_template
+help with my knee pain after overhead press should i keep training or seek medical advice,medical_or_injury,ask_form,augmented_template
+is this symptom knee pain after overhead press; should I keep training or seek medical advice,medical_or_injury,,augmented_template
+i hurt my knee pain after overhead press; should i keep training or seek medical advice,medical_or_injury,,augmented_template
+my joint is knee pain after overhead press; should I keep training or seek medical advice,medical_or_injury,,augmented_template
+i have a medical knee pain after overhead press; should I keep training or seek medical advice I am not sure where to start and would appreciate a simple answer that fits my week.,medical_or_injury,,augmented_template
+gym bro my knee pain after overhead press; should I keep training or seek medical advice,medical_or_injury,,augmented_template
+can u help with my knee pain after overhead press; should i keep training or seek medical advice,medical_or_injury,,augmented_template
+pls diagnose knee pain after overhead press; should I keep training or seek medical advice,medical_or_injury,,augmented_template
+sore after knee pain after overhead press; should I keep training or seek medical advice I am not sure where to start and would appreciate a simple answer that fits my week.,medical_or_injury,,augmented_template
+numb during knee pain after overhead press should i keep training or seek medical advice,medical_or_injury,ask_form,augmented_template
+dizzy while knee pain after overhead press; should I keep training or seek medical advice,medical_or_injury,,augmented_template
+what is wrong with knee pain after overhead press; should i keep training or seek medical advice,medical_or_injury,,augmented_template
+do these symptoms knee pain after overhead press; should I keep training or seek medical advice,medical_or_injury,,augmented_template
+is this concerning knee pain after overhead press; should I keep training or seek medical advice I am not sure where to start and would appreciate a simple answer that fits my week.,medical_or_injury,,augmented_template
+i have knee pain after pull-up; should I keep training or seek medical advice,medical_or_injury,,augmented_template
+should i train with knee pain after pull-up; should i keep training or seek medical advice,medical_or_injury,,augmented_template
+can u diagnose knee pain after pull-up; should I keep training or seek medical advice,medical_or_injury,,augmented_template
+what do i do about knee pain after pull-up; should I keep training or seek medical advice I am not sure where to start and would appreciate a simple answer that fits my week.,medical_or_injury,,augmented_template
+is it safe with knee pain after pullup should i keep training or seek medical advice,medical_or_injury,ask_form,augmented_template
+i feel knee pain after pull-up; should I keep training or seek medical advice,medical_or_injury,,augmented_template
+im experiencing knee pain after pull-up; should i keep training or seek medical advice,medical_or_injury,,augmented_template
+could this be knee pain after pull-up; should I keep training or seek medical advice,medical_or_injury,,augmented_template
+do i need clearance for knee pain after pull-up; should I keep training or seek medical advice I am not sure where to start and would appreciate a simple answer that fits my week.,medical_or_injury,,augmented_template
+injury question,medical_or_injury,,augmented_template
+my doctor said knee pain after pull-up; should I keep training or seek medical advice,medical_or_injury,,augmented_template
+after an injury knee pain after pull-up; should i keep training or seek medical advice,medical_or_injury,,augmented_template
+pain started in knee pain after pull-up; should I keep training or seek medical advice,medical_or_injury,,augmented_template
+i am worried about knee pain after pull-up; should I keep training or seek medical advice I am not sure where to start and would appreciate a simple answer that fits my week.,medical_or_injury,,augmented_template
+can i exercise with knee pain after pullup should i keep training or seek medical advice,medical_or_injury,ask_form,augmented_template
+what treatment for knee pain after pull-up; should I keep training or seek medical advice,medical_or_injury,,augmented_template
+help with my knee pain after pull-up; should i keep training or seek medical advice,medical_or_injury,,augmented_template
+is this symptom knee pain after pull-up; should I keep training or seek medical advice,medical_or_injury,,augmented_template
+i hurt my knee pain after pull-up; should I keep training or seek medical advice I am not sure where to start and would appreciate a simple answer that fits my week.,medical_or_injury,,augmented_template
+i have a medical knee pain after pull-up; should I keep training or seek medical advice,medical_or_injury,,augmented_template
+should i ignore knee pain after pull-up; should i keep training or seek medical advice,medical_or_injury,,augmented_template
+gym bro my knee pain after pull-up; should I keep training or seek medical advice,medical_or_injury,,augmented_template
+can u help with my knee pain after pull-up; should I keep training or seek medical advice I am not sure where to start and would appreciate a simple answer that fits my week.,medical_or_injury,,augmented_template
+pls diagnose knee pain after pullup should i keep training or seek medical advice,medical_or_injury,ask_form,augmented_template
+sore after knee pain after pull-up; should I keep training or seek medical advice,medical_or_injury,,augmented_template
+numb during knee pain after pull-up; should i keep training or seek medical advice,medical_or_injury,,augmented_template
+dizzy while knee pain after pull-up; should I keep training or seek medical advice,medical_or_injury,,augmented_template
+what is wrong with knee pain after pull-up; should I keep training or seek medical advice I am not sure where to start and would appreciate a simple answer that fits my week.,medical_or_injury,,augmented_template
+is this concerning knee pain after pull-up; should I keep training or seek medical advice,medical_or_injury,,augmented_template
+my knee pain after row; should i keep training or seek medical advice,medical_or_injury,,augmented_template
+i have knee pain after row; should I keep training or seek medical advice,medical_or_injury,,augmented_template
+should i train with knee pain after row; should I keep training or seek medical advice I am not sure where to start and would appreciate a simple answer that fits my week.,medical_or_injury,,augmented_template
+can you diagnose knee pain after row should i keep training or seek medical advice,medical_or_injury,ask_form,augmented_template
+what do i do about knee pain after row; should I keep training or seek medical advice,medical_or_injury,,augmented_template
+is it safe with knee pain after row; should i keep training or seek medical advice,medical_or_injury,,augmented_template
+i feel knee pain after row; should I keep training or seek medical advice,medical_or_injury,,augmented_template
+im experiencing knee pain after row; should I keep training or seek medical advice I am not sure where to start and would appreciate a simple answer that fits my week.,medical_or_injury,,augmented_template
+do i need clearance for knee pain after row; should I keep training or seek medical advice,medical_or_injury,,augmented_template
+what medicine for knee pain after row; should i keep training or seek medical advice,medical_or_injury,,augmented_template
+my doctor said knee pain after row; should I keep training or seek medical advice,medical_or_injury,,augmented_template
+after an injury knee pain after row; should I keep training or seek medical advice I am not sure where to start and would appreciate a simple answer that fits my week.,medical_or_injury,,augmented_template
+pain started in knee pain after row should i keep training or seek medical advice,medical_or_injury,ask_form,augmented_template
+i am worried about knee pain after row; should I keep training or seek medical advice,medical_or_injury,,augmented_template
+can i exercise with knee pain after row; should i keep training or seek medical advice,medical_or_injury,,augmented_template
+what treatment for knee pain after row; should I keep training or seek medical advice,medical_or_injury,,augmented_template
+help with my knee pain after row; should I keep training or seek medical advice I am not sure where to start and would appreciate a simple answer that fits my week.,medical_or_injury,,augmented_template
+i hurt my knee pain after row; should I keep training or seek medical advice,medical_or_injury,,augmented_template
+my joint is knee pain after row; should i keep training or seek medical advice,medical_or_injury,,augmented_template
+i have a medical knee pain after row; should I keep training or seek medical advice,medical_or_injury,,augmented_template
+should i ignore knee pain after row; should I keep training or seek medical advice I am not sure where to start and would appreciate a simple answer that fits my week.,medical_or_injury,,augmented_template
+gym bro my knee pain after row should i keep training or seek medical advice,medical_or_injury,ask_form,augmented_template
+can u help with my knee pain after row; should I keep training or seek medical advice,medical_or_injury,,augmented_template
+pls diagnose knee pain after row; should i keep training or seek medical advice,medical_or_injury,,augmented_template
+sore after knee pain after row; should I keep training or seek medical advice,medical_or_injury,,augmented_template
+numb during knee pain after row; should I keep training or seek medical advice I am not sure where to start and would appreciate a simple answer that fits my week.,medical_or_injury,,augmented_template
+what is wrong with knee pain after row; should I keep training or seek medical advice,medical_or_injury,,augmented_template
+do these symptoms knee pain after row; should i keep training or seek medical advice,medical_or_injury,,augmented_template
+is this concerning knee pain after row; should I keep training or seek medical advice,medical_or_injury,,augmented_template
+my knee pain after bicep curl; should I keep training or seek medical advice I am not sure where to start and would appreciate a simple answer that fits my week.,medical_or_injury,,augmented_template
+i have knee pain after bicep curl should i keep training or seek medical advice,medical_or_injury,ask_form,augmented_template
+should i train with knee pain after bicep curl; should I keep training or seek medical advice,medical_or_injury,,augmented_template
+can you diagnose knee pain after bicep curl; should i keep training or seek medical advice,medical_or_injury,,augmented_template
+what do i do about knee pain after bicep curl; should I keep training or seek medical advice,medical_or_injury,,augmented_template
+is it safe with knee pain after bicep curl; should I keep training or seek medical advice I am not sure where to start and would appreciate a simple answer that fits my week.,medical_or_injury,,augmented_template
+im experiencing knee pain after bicep curl; should I keep training or seek medical advice,medical_or_injury,,augmented_template
+could this be knee pain after bicep curl; should i keep training or seek medical advice,medical_or_injury,,augmented_template
+do i need clearance for knee pain after bicep curl; should I keep training or seek medical advice,medical_or_injury,,augmented_template
+what medicine for knee pain after bicep curl; should I keep training or seek medical advice I am not sure where to start and would appreciate a simple answer that fits my week.,medical_or_injury,,augmented_template
+my doctor said knee pain after bicep curl should i keep training or seek medical advice,medical_or_injury,ask_form,augmented_template
+after an injury knee pain after bicep curl; should I keep training or seek medical advice,medical_or_injury,,augmented_template
+pain started in knee pain after bicep curl; should i keep training or seek medical advice,medical_or_injury,,augmented_template
+i am worried about knee pain after bicep curl; should I keep training or seek medical advice,medical_or_injury,,augmented_template
+can i exercise with knee pain after bicep curl; should I keep training or seek medical advice I am not sure where to start and would appreciate a simple answer that fits my week.,medical_or_injury,,augmented_template
+help with my knee pain after bicep curl; should I keep training or seek medical advice,medical_or_injury,,augmented_template
+is this symptom knee pain after bicep curl; should i keep training or seek medical advice,medical_or_injury,,augmented_template
+i hurt my knee pain after bicep curl; should I keep training or seek medical advice,medical_or_injury,,augmented_template
+my joint is knee pain after bicep curl; should I keep training or seek medical advice I am not sure where to start and would appreciate a simple answer that fits my week.,medical_or_injury,,augmented_template
+i have a medical knee pain after bicep curl should i keep training or seek medical advice,medical_or_injury,ask_form,augmented_template
+should i ignore knee pain after bicep curl; should I keep training or seek medical advice,medical_or_injury,,augmented_template
+gym bro my knee pain after bicep curl; should i keep training or seek medical advice,medical_or_injury,,augmented_template
+can u help with my knee pain after bicep curl; should I keep training or seek medical advice,medical_or_injury,,augmented_template
+pls diagnose knee pain after bicep curl; should I keep training or seek medical advice I am not sure where to start and would appreciate a simple answer that fits my week.,medical_or_injury,,augmented_template
+numb during knee pain after bicep curl; should I keep training or seek medical advice,medical_or_injury,,augmented_template
+dizzy while knee pain after bicep curl; should i keep training or seek medical advice,medical_or_injury,,augmented_template
+what is wrong with knee pain after bicep curl; should I keep training or seek medical advice,medical_or_injury,,augmented_template
+do these symptoms knee pain after bicep curl; should I keep training or seek medical advice I am not sure where to start and would appreciate a simple answer that fits my week.,medical_or_injury,,augmented_template
+is this concerning knee pain after bicep curl should i keep training or seek medical advice,medical_or_injury,ask_form,augmented_template
+my knee pain after tricep dip; should I keep training or seek medical advice,medical_or_injury,,augmented_template
+i have knee pain after tricep dip; should i keep training or seek medical advice,medical_or_injury,,augmented_template
+should i train with knee pain after tricep dip; should I keep training or seek medical advice,medical_or_injury,,augmented_template
+can you diagnose knee pain after tricep dip; should I keep training or seek medical advice I am not sure where to start and would appreciate a simple answer that fits my week.,medical_or_injury,,augmented_template
+is it safe with knee pain after tricep dip; should I keep training or seek medical advice,medical_or_injury,,augmented_template
+i feel knee pain after tricep dip; should i keep training or seek medical advice,medical_or_injury,,augmented_template
+im experiencing knee pain after tricep dip; should I keep training or seek medical advice,medical_or_injury,,augmented_template
+could this be knee pain after tricep dip; should I keep training or seek medical advice I am not sure where to start and would appreciate a simple answer that fits my week.,medical_or_injury,,augmented_template
+do i need clearance for knee pain after tricep dip should i keep training or seek medical advice,medical_or_injury,ask_form,augmented_template
+what medicine for knee pain after tricep dip; should I keep training or seek medical advice,medical_or_injury,,augmented_template
+my doctor said knee pain after tricep dip; should i keep training or seek medical advice,medical_or_injury,,augmented_template
+after an injury knee pain after tricep dip; should I keep training or seek medical advice,medical_or_injury,,augmented_template
+pain started in knee pain after tricep dip; should I keep training or seek medical advice I am not sure where to start and would appreciate a simple answer that fits my week.,medical_or_injury,,augmented_template
+can i exersize with knee pain after tricep dip; should I keep training or seek medical advice,medical_or_injury,,augmented_template
+what treatment for knee pain after tricep dip; should i keep training or seek medical advice,medical_or_injury,,augmented_template
+help with my knee pain after tricep dip; should I keep training or seek medical advice,medical_or_injury,,augmented_template
+is this symptom knee pain after tricep dip; should I keep training or seek medical advice I am not sure where to start and would appreciate a simple answer that fits my week.,medical_or_injury,,augmented_template
+i hurt my knee pain after tricep dip should i keep training or seek medical advice,medical_or_injury,ask_form,augmented_template
+my joint is knee pain after tricep dip; should I keep training or seek medical advice,medical_or_injury,,augmented_template
+i have a medical knee pain after tricep dip; should i keep training or seek medical advice,medical_or_injury,,augmented_template
+should i ignore knee pain after tricep dip; should I keep training or seek medical advice,medical_or_injury,,augmented_template
+gym bro my knee pain after tricep dip; should I keep training or seek medical advice I am not sure where to start and would appreciate a simple answer that fits my week.,medical_or_injury,,augmented_template
+pls diagnose knee pain after tricep dip; should I keep training or seek medical advice,medical_or_injury,,augmented_template
+sore after knee pain after tricep dip; should i keep training or seek medical advice,medical_or_injury,,augmented_template
+numb during knee pain after tricep dip; should I keep training or seek medical advice,medical_or_injury,,augmented_template
+random trivia,out_of_scope,,augmented_template
+what is a movie,out_of_scope,,augmented_template
+how do i a movie,out_of_scope,,augmented_template
+can u help with a movie,out_of_scope,,augmented_template
+who was a movie I am not sure where to start and would appreciate a simple answer that fits my week.,out_of_scope,,augmented_template
+which one is a movie,out_of_scope,motivation,augmented_template
+explain a movie,out_of_scope,,augmented_template
+i need help with a movie,out_of_scope,,augmented_template
+what should i buy a movie,out_of_scope,,augmented_template
+recommend a a movie I am not sure where to start and would appreciate a simple answer that fits my week.,out_of_scope,,augmented_template
+homework help,out_of_scope,,augmented_template
+show me how to a movie,out_of_scope,,augmented_template
+can you solve a movie,out_of_scope,,augmented_template
+why did a movie,out_of_scope,,augmented_template
+give me facts about a movie I am not sure where to start and would appreciate a simple answer that fits my week.,out_of_scope,,augmented_template
+what happened in a movie,out_of_scope,motivation,augmented_template
+where can i a movie,out_of_scope,,augmented_template
+which laptop a movie,out_of_scope,,augmented_template
+help with my homework a movie,out_of_scope,,augmented_template
+gym bro unrelated question a movie I am not sure where to start and would appreciate a simple answer that fits my week.,out_of_scope,,augmented_template
+buy a laptop,out_of_scope,,augmented_template
+pls explain a movie,out_of_scope,,augmented_template
+i wonder a movie,out_of_scope,,augmented_template
+what are the rules for a movie,out_of_scope,,augmented_template
+how can i hack a movie I am not sure where to start and would appreciate a simple answer that fits my week.,out_of_scope,,augmented_template
+what is the best a movie,out_of_scope,motivation,augmented_template
+who wrote a movie,out_of_scope,,augmented_template
+how does a movie,out_of_scope,,augmented_template
+could you answer a movie,out_of_scope,,augmented_template
+off topic question a movie I am not sure where to start and would appreciate a simple answer that fits my week.,out_of_scope,,augmented_template
+random question a movie,out_of_scope,,augmented_template
+tell me about a travel plan,out_of_scope,,augmented_template
+what is a travel plan,out_of_scope,,augmented_template
+how do i a travel plan I am not sure where to start and would appreciate a simple answer that fits my week.,out_of_scope,,augmented_template
+can you help with a travel plan,out_of_scope,motivation,augmented_template
+who was a travel plan,out_of_scope,,augmented_template
+which one is a travel plan,out_of_scope,,augmented_template
+explain a travel plan,out_of_scope,,augmented_template
+i need help with a travel plan I am not sure where to start and would appreciate a simple answer that fits my week.,out_of_scope,,augmented_template
+recomend a a travel plan,out_of_scope,,augmented_template
+is it possible to a travel plan,out_of_scope,,augmented_template
+show me how to a travel plan,out_of_scope,,augmented_template
+can you solve a travel plan I am not sure where to start and would appreciate a simple answer that fits my week.,out_of_scope,,augmented_template
+why did a travel plan,out_of_scope,motivation,augmented_template
+give me facts about a travel plan,out_of_scope,,augmented_template
+what happened in a travel plan,out_of_scope,,augmented_template
+where can i a travel plan,out_of_scope,,augmented_template
+which laptop a travel plan I am not sure where to start and would appreciate a simple answer that fits my week.,out_of_scope,,augmented_template
+gym bro unrelated question a travel plan,out_of_scope,,augmented_template
+can u tell me a travel plan,out_of_scope,,augmented_template
+pls explain a travel plan,out_of_scope,,augmented_template
+i wonder a travel plan I am not sure where to start and would appreciate a simple answer that fits my week.,out_of_scope,,augmented_template
+what are the rules for a travel plan,out_of_scope,motivation,augmented_template
+how can i hack a travel plan,out_of_scope,,augmented_template
+what is the best a travel plan,out_of_scope,,augmented_template
+who wrote a travel plan,out_of_scope,,augmented_template
+how does a travel plan I am not sure where to start and would appreciate a simple answer that fits my week.,out_of_scope,,augmented_template
+off topic question a travel plan,out_of_scope,,augmented_template
+not fitness but a travel plan,out_of_scope,,augmented_template
+random question a travel plan,out_of_scope,,augmented_template
+tell me about a laptop for school I am not sure where to start and would appreciate a simple answer that fits my week.,out_of_scope,,augmented_template
+what is a laptop for school,out_of_scope,motivation,augmented_template
+how do i a laptop for school,out_of_scope,,augmented_template
+can you help with a laptop for school,out_of_scope,,augmented_template
+who was a laptop for school,out_of_scope,,augmented_template
+which one is a laptop for school I am not sure where to start and would appreciate a simple answer that fits my week.,out_of_scope,,augmented_template
+i need help with a laptop for school,out_of_scope,,augmented_template
+what should i buy a laptop for school,out_of_scope,,augmented_template
+recommend a a laptop for school,out_of_scope,,augmented_template
+is it possible to a laptop for school I am not sure where to start and would appreciate a simple answer that fits my week.,out_of_scope,,augmented_template
+show me how to a laptop for school,out_of_scope,motivation,augmented_template
+can you solve a laptop for school,out_of_scope,,augmented_template
+why did a laptop for school,out_of_scope,,augmented_template
+give me facts about a laptop for school,out_of_scope,,augmented_template
+what happened in a laptop for school I am not sure where to start and would appreciate a simple answer that fits my week.,out_of_scope,,augmented_template
+which laptop a laptop for school,out_of_scope,,augmented_template
+help with my homework a laptop for school,out_of_scope,,augmented_template
+gym bro unrelated question a laptop for school,out_of_scope,,augmented_template
+can u tell me a laptop for school I am not sure where to start and would appreciate a simple answer that fits my week.,out_of_scope,,augmented_template
+pls explain a laptop for school,out_of_scope,motivation,augmented_template
+i wonder a laptop for school,out_of_scope,,augmented_template
+what are the rules for a laptop for school,out_of_scope,,augmented_template
+how can i hack a laptop for school,out_of_scope,,augmented_template
+what is the best a laptop for school I am not sure where to start and would appreciate a simple answer that fits my week.,out_of_scope,,augmented_template
+how does a laptop for school,out_of_scope,,augmented_template
+could you answer a laptop for school,out_of_scope,,augmented_template
+off topic question a laptop for school,out_of_scope,,augmented_template
+not fitness but a laptop for school I am not sure where to start and would appreciate a simple answer that fits my week.,out_of_scope,,augmented_template
+random question a laptop for school,out_of_scope,motivation,augmented_template
+tell me about a history topic,out_of_scope,,augmented_template
+what is a history topic,out_of_scope,,augmented_template
+how do i a history topic,out_of_scope,,augmented_template
+can you help with a history topic I am not sure where to start and would appreciate a simple answer that fits my week.,out_of_scope,,augmented_template
+which one is a history topic,out_of_scope,,augmented_template
+explain a history topic,out_of_scope,,augmented_template
+i need help with a history topic,out_of_scope,,augmented_template
+what should i buy a history topic I am not sure where to start and would appreciate a simple answer that fits my week.,out_of_scope,,augmented_template
+recommend a a history topic,out_of_scope,motivation,augmented_template
+is it possible to a history topic,out_of_scope,,augmented_template
+show me how to a history topic,out_of_scope,,augmented_template
+can u solve a history topic,out_of_scope,,augmented_template
+why did a history topic I am not sure where to start and would appreciate a simple answer that fits my week.,out_of_scope,,augmented_template
+what happened in a history topic,out_of_scope,,augmented_template
+where can i a history topic,out_of_scope,,augmented_template
+which laptop a history topic,out_of_scope,,augmented_template
+help with my homework a history topic I am not sure where to start and would appreciate a simple answer that fits my week.,out_of_scope,,augmented_template
+gym bro unrelated question a history topic,out_of_scope,motivation,augmented_template
+can u tell me a history topic,out_of_scope,,augmented_template
+pls explain a history topic,out_of_scope,,augmented_template
+i wonder a history topic,out_of_scope,,augmented_template
+what are the rules for a history topic I am not sure where to start and would appreciate a simple answer that fits my week.,out_of_scope,,augmented_template
+what is the best a history topic,out_of_scope,,augmented_template
+who wrote a history topic,out_of_scope,,augmented_template
+how does a history topic,out_of_scope,,augmented_template
+could you answer a history topic I am not sure where to start and would appreciate a simple answer that fits my week.,out_of_scope,,augmented_template
+off topic question a history topic,out_of_scope,motivation,augmented_template
+not fitness but a history topic,out_of_scope,,augmented_template
+random question a history topic,out_of_scope,,augmented_template
+tell me about the Cold War,out_of_scope,,augmented_template
+what is the Cold War I am not sure where to start and would appreciate a simple answer that fits my week.,out_of_scope,,augmented_template
+can you help with the Cold War,out_of_scope,,augmented_template
+who was the cold war,out_of_scope,,augmented_template
+which one is the Cold War,out_of_scope,,augmented_template
+explain the Cold War I am not sure where to start and would appreciate a simple answer that fits my week.,out_of_scope,,augmented_template
+i need help with the cold war,out_of_scope,motivation,augmented_template
+what should i buy the Cold War,out_of_scope,,augmented_template
+recommend a the cold war,out_of_scope,,augmented_template
+is it possible to the Cold War,out_of_scope,,augmented_template
+show me how to the Cold War I am not sure where to start and would appreciate a simple answer that fits my week.,out_of_scope,,augmented_template
+why did the Cold War,out_of_scope,,augmented_template
+give me facts about the cold war,out_of_scope,,augmented_template
+what happened in the Cold War,out_of_scope,,augmented_template
+where can i the Cold War I am not sure where to start and would appreciate a simple answer that fits my week.,out_of_scope,,augmented_template
+which laptop the cold war,out_of_scope,motivation,augmented_template
+help with my homework the Cold War,out_of_scope,,augmented_template
+gym bro unrelated question the cold war,out_of_scope,,augmented_template
+can u tell me the Cold War,out_of_scope,,augmented_template
+pls explain the Cold War I am not sure where to start and would appreciate a simple answer that fits my week.,out_of_scope,,augmented_template
+what are the rules for the Cold War,out_of_scope,,augmented_template
+how can i hack the cold war,out_of_scope,,augmented_template
+what is the best the Cold War,out_of_scope,,augmented_template
+who wrote the Cold War I am not sure where to start and would appreciate a simple answer that fits my week.,out_of_scope,,augmented_template
+how does the cold war,out_of_scope,motivation,augmented_template
+could you answer the Cold War,out_of_scope,,augmented_template
+off topic question the cold war,out_of_scope,,augmented_template
+not fitness but the Cold War,out_of_scope,,augmented_template
+random question the Cold War I am not sure where to start and would appreciate a simple answer that fits my week.,out_of_scope,,augmented_template
+what is a homework question,out_of_scope,,augmented_template
+how do i a homework question,out_of_scope,,augmented_template
+can u help with a homework question,out_of_scope,,augmented_template
