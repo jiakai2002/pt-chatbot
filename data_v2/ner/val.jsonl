@@ -1,0 +1,21 @@
+{"text": "Build me a four day beginner plan", "entities": [[20, 28, "EXPERIENCE_LEVEL"]]}
+{"text": "Recommend a chest workout", "entities": [[12, 17, "BODY_PART"]]}
+{"text": "How do I perform a lunge", "entities": [[19, 24, "EXERCISE"]]}
+{"text": "What should I eat after exercise", "entities": []}
+{"text": "I want to log today's workout", "entities": []}
+{"text": "I need encouragement to train", "entities": []}
+{"text": "I have pain when I squat", "entities": [[19, 24, "EXERCISE"]]}
+{"text": "Create a beginner plan for two days", "entities": [[9, 17, "EXPERIENCE_LEVEL"]]}
+{"text": "What exercises target my arms", "entities": [[25, 29, "BODY_PART"]]}
+{"text": "How do I keep my back neutral in a deadlift", "entities": [[17, 21, "BODY_PART"], [35, 43, "EXERCISE"]]}
+{"text": "What should I eat before a workout", "entities": []}
+{"text": "I completed my cardio session", "entities": []}
+{"text": "I need help staying consistent", "entities": []}
+{"text": "Can you diagnose my shoulder pain", "entities": [[20, 28, "BODY_PART"]]}
+{"text": "Make a weekly strength schedule", "entities": [[14, 22, "GOAL"]]}
+{"text": "Recommend bodyweight exercises", "entities": [[10, 20, "EQUIPMENT"]]}
+{"text": "How should I set up a plank", "entities": [[22, 27, "EXERCISE"]]}
+{"text": "What is a healthy post-workout meal", "entities": [[10, 17, "GOAL"]]}
+{"text": "Please record that I trained today", "entities": []}
+{"text": "I feel discouraged about exercise", "entities": []}
+{"text": "What medicine should I take for an injury", "entities": []}
