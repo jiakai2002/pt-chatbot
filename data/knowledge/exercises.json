@@ -1,6 +1,0 @@
-[
-  {"name": "Squat", "body_part": "legs", "steps": ["Stand with feet about shoulder-width apart.", "Lower your hips while keeping your feet flat.", "Push through your feet to stand tall."], "common_mistake": "Letting the knees collapse inward."},
-  {"name": "Push-up", "body_part": "chest", "steps": ["Place your hands just wider than your shoulders.", "Keep your body in a straight line as you lower your chest.", "Push the floor away to return to the start."], "common_mistake": "Allowing the hips to sag or rise too far."},
-  {"name": "Plank", "body_part": "core", "steps": ["Place your elbows under your shoulders.", "Keep your body in a straight line.", "Brace your core and breathe steadily."], "common_mistake": "Holding your breath or letting your lower back sag."},
-  {"name": "Lunge", "body_part": "legs", "steps": ["Stand tall and step one foot forward.", "Lower both knees under control.", "Push through the front foot to return to standing."], "common_mistake": "Allowing the front knee to collapse inward."}
-]

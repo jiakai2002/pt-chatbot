@@ -1,1 +1,2 @@
-"""Development and training scripts."""
+"""Project maintenance and evaluation scripts."""
+

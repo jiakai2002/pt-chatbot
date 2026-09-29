@@ -1,218 +1,211 @@
-# Personal Fitness Chatbot
+# FitBuddy
 
-An offline, educational fitness chatbot built with Python and Streamlit. The project demonstrates a complete NLP pipeline for understanding common fitness requests, extracting useful details, retrieving exercise information, and producing safe, structured responses.
+FitBuddy is an offline personal fitness chatbot based on the project proposal.
+It classifies fitness questions, extracts fitness entities, maintains a small
+user profile, retrieves local fitness data, and responds with controlled
+templates.
 
-The chatbot is intended for general education only. It does not diagnose injuries or replace advice from a qualified fitness or healthcare professional.
+## Phase 1 setup
 
-## Features
+FitBuddy currently targets Python 3.11–3.13. Create a virtual environment and
+install the dependencies:
 
-- Intent classification for workout plans, exercise recommendations, exercise form, nutrition, progress logging, motivation, and out-of-scope queries.
-- Rule-based entity extraction using spaCy's EntityRuler and regular expressions.
-- Custom spaCy NER training pipeline with labelled fitness entity data.
-- Extraction of exercises, body parts, equipment, goals, experience level, duration, sets, repetitions, and injury indicators.
-- Simple in-session user profile for goals, experience level, equipment, training days, and session duration.
-- Local exercise knowledge base stored in JSON.
-- Deterministic offline exercise retrieval.
-- Template-based responses for predictable and controllable output.
-- Safety response for pain and injury-related queries.
-- Streamlit chat interface.
-- TF-IDF/logistic regression fallback model when DistilBERT is unavailable.
+```powershell
+py -3.12 -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+Prepare local raw data with:
+
+```powershell
+python scripts/prepare_data.py
+```
+
+Raw datasets belong under `data/raw/`. The preparation script creates cleaned
+files under `data/processed/` and reports missing inputs without silently
+inventing or augmenting data. Nutrition uses the complete local USDA SR Legacy
+release as its primary dataset.
+
+See `proposal.md` for the project requirements and evaluation targets.
+
+## Project overview
+
+FitBuddy is designed to be reproducible and safe for student-level delivery.
+It does not call an external LLM API, generate unrestricted text, or provide
+medical advice.
+
+### Objectives
+
+- Classify six fitness intents with at least 90% accuracy and 85% macro-F1.
+- Extract exercises, body parts, equipment, goals, levels, and durations with
+  at least 85% F1.
+- Personalise follow-up replies using a session profile.
+- Respond in under one second on a laptop CPU after the model is loaded.
+- Refuse medical and unsupported requests safely.
+
+Supported intents:
+
+```text
+generate_plan
+find_exercise
+get_nutrition_info
+log_feeling
+general_chat
+out_of_scope
+```
+
+## Current status
+
+### Phase 1 - completed
+
+- Original intent splits preserved without augmentation: 960 train, 120
+  validation, and 120 test utterances.
+- Six balanced intent labels with no cross-split utterance leakage.
+- 876 normalized exercise records from Free Exercise DB.
+- 7,793 USDA FoodData Central SR Legacy records as the primary nutrition
+  dataset.
+- 5,432 FNDDS records retained separately as a secondary nutrition dataset.
+
+### Phase 2 - completed baseline
+
+- DistilBERT intent classifier trained on CPU.
+- Rule-based fitness entity extraction implemented.
+- Medical and out-of-scope safety routing implemented.
+- Multi-turn dialogue profile implemented.
+
+Held-out test results:
+
+```text
+Accuracy: 91.67%
+Macro-F1: 91.55%
+```
+
+### Phase 3 - next
+
+- Knowledge-base retrieval.
+- Response templates and slot filling.
+- Workout planning.
+- End-to-end pipeline integration.
+- Streamlit interface.
 
 ## Architecture
 
 ```text
 User message
-     |
-     v
-Text preprocessing
-     |
-     v
-Intent classification  <--- DistilBERT or TF-IDF/logistic regression
-     |
-     v
-Entity extraction     <--- spaCy EntityRuler + regular expressions
-     |
-     v
-Dialogue state and user profile
-     |
-     +--------------------+
-     |                    |
-     v                    v
-Exercise retrieval   Response templates
-     |                    |
-     +---------+----------+
-               v
-       Safety-aware response
+    v
+Safety routing
+    v
+DistilBERT intent classifier
+    v
+Rule-based entity extractor
+    v
+Dialogue profile/state
+    v
+Local exercise or nutrition lookup
+    v
+Template response
 ```
 
-The application uses local models and local data at runtime. No external generative API is required.
+The intent model uses `distilbert-base-uncased`. Entity extraction uses spaCy
+phrase rules when the native spaCy package is available and a transparent
+phrase/regex fallback otherwise. The chatbot stores only session-level profile
+information such as goal, level, equipment, duration, and the last intent.
 
-## Project structure
+## Repository structure
 
 ```text
-.
-├── app.py                         # Streamlit application
+fitbuddy/
 ├── data/
-│   ├── intent/                    # Intent datasets and source information
-│   ├── knowledge/                 # Exercise knowledge base
-│   └── user_profiles/             # Reserved for saved profiles
+│   ├── SOURCES.md
+│   ├── raw/                    # Downloaded source data; ignored by Git
+│   ├── processed/              # Prepared local datasets; ignored by Git
+│   └── user_profiles/
 ├── models/
-│   └── intent_classifier/         # Local model outputs; ignored by Git
-├── notebooks/                     # Training experiment notebook
+│   └── intent_classifier/      # Local trained model; ignored by Git
 ├── scripts/
-│   ├── import_fitness_dataset.py  # Import and merge intent data
-│   ├── train_intent.py            # Train classical baseline
-│   ├── train_intent_distilbert.py # Fine-tune DistilBERT
-│   ├── evaluate_distilbert.py     # Evaluate saved DistilBERT model
-│   ├── prepare_ner_data.py        # Create labelled NER JSONL data
-│   ├── train_ner.py               # Train custom spaCy NER
-│   ├── evaluate_ner.py            # Evaluate custom spaCy NER
-│   ├── test_entities.py           # Entity extraction checks
-│   ├── test_rag.py                # Retrieval checks
-│   └── test_chatbot.py            # End-to-end smoke tests
+│   ├── prepare_data.py
+│   ├── train_intent.py
+│   └── evaluate_intent.py
 ├── src/
-│   ├── intent_classifier.py       # Model loading and intent prediction
-│   ├── entity_extractor.py        # Entity extraction
-│   ├── dialogue.py                # Profile updates and response selection
-│   ├── rag.py                     # Local exercise retrieval
-│   ├── response_templates.py      # Deterministic response templates
-│   └── utils.py                   # Local data helpers
+│   ├── config.py
+│   ├── intent_classifier.py
+│   ├── entity_extractor.py
+│   ├── safety.py
+│   └── dialogue_manager.py
+├── proposal.docx
+├── proposal.md
+├── project_guidelines.pdf
 ├── requirements.txt
 └── README.md
 ```
 
-## Installation
+## Environment setup
 
-Create and activate a virtual environment:
-
-```powershell
-python -m venv .venv
-.\.venv\Scripts\activate
-```
-
-Install dependencies:
+Use Python 3.12. Python 3.14 is not currently assumed for the scientific
+Python stack on Windows.
 
 ```powershell
+py -3.12 -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-## Running the chatbot
-
-Start the Streamlit interface:
-
-```powershell
-streamlit run app.py
-```
-
-The application loads the saved DistilBERT model when it is available. If it is not available, it falls back to the saved classical classifier and then to keyword matching.
-
-## Data and model preparation
-
-The repository contains the intent CSV files and the local exercise knowledge base. To import the available fitness-intent Parquet data into the training data, run:
+If PowerShell blocks activation, run commands through the environment's Python
+directly:
 
 ```powershell
-python scripts/import_fitness_dataset.py
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
 ```
 
-Train the TF-IDF/logistic regression baseline:
+## Data preparation
+
+Raw files are intentionally separate from processed data. Place the following
+sources under `data/raw/`:
+
+```text
+data/raw/intent_dataset/{train,validation,test}.parquet
+data/raw/exercise_db/exercises.json
+data/raw/nutrition/sr-legacy/.../food.csv
+data/raw/nutrition/sr-legacy/.../food_nutrient.csv
+data/raw/nutrition/sr-legacy/.../nutrient.csv
+data/raw/nutrition/sr-legacy/.../food_category.csv
+data/raw/nutrition/sr-legacy/.../food_portion.csv
+```
+
+Run:
+
+```powershell
+python scripts/prepare_data.py
+```
+
+The script validates labels, removes duplicate rows within a split, checks for
+cross-split leakage, normalizes exercise data, and creates the primary SR
+Legacy nutrition JSON. It does not augment or synthesize data.
+
+## Training and evaluation
 
 ```powershell
 python scripts/train_intent.py
+python scripts/evaluate_intent.py
 ```
 
-Fine-tune the DistilBERT classifier:
+Training uses a maximum sequence length of 64 tokens, learning rate `2e-5`,
+batch size 16, and three epochs. The trained model is saved under
+`models/intent_classifier/`; model files are ignored by Git and can be
+recreated with the training script.
 
-```powershell
-python scripts/train_intent_distilbert.py
-```
+## Safety and data policy
 
-The DistilBERT training script uses `distilbert-base-uncased`, trains for three epochs, and saves the tokenizer and model under `models/intent_classifier/distilbert/`.
+Medical keywords such as pain, injury, medication, diagnosis, and symptoms are
+routed to a fixed refusal message. Unsupported topics receive a fixed
+fitness-scope response. FitBuddy is not a doctor, diagnostic tool, or
+replacement for a qualified trainer.
 
-Evaluate the saved DistilBERT model:
-
-```powershell
-python -m scripts.evaluate_distilbert
-```
-
-The trained model files are intentionally excluded from Git through `.gitignore`. This keeps the repository lightweight and avoids committing the approximately 268 MB local model artefacts.
-
-## Training the custom NER model
-
-The NER data is generated from the existing fitness sentences using the current entity dictionary as weak supervision. The generated JSONL files should be manually reviewed and corrected before being used as a final gold-standard dataset.
-
-Prepare the labelled NER data:
-
-```powershell
-python -m scripts.prepare_ner_data
-```
-
-Train the custom spaCy NER model from a blank English pipeline:
-
-```powershell
-python -m scripts.train_ner
-```
-
-Evaluate it on the held-out NER test split:
-
-```powershell
-python -m scripts.evaluate_ner
-```
-
-The Streamlit application automatically loads `models/ner/fitness_ner/` when it exists. If it is unavailable, it falls back to the existing EntityRuler and regular-expression extraction.
-
-## Testing
-
-```powershell
-python -m scripts.test_entities
-python -m scripts.test_rag
-python -m scripts.test_chatbot
-python -m compileall -q app.py src scripts
-```
-
-These checks cover entity extraction, exercise retrieval, chatbot intent handling, profile updates, response generation, safety behaviour, and Python compilation.
-
-## Example interactions
-
-The chatbot is designed to handle messages such as:
-
-- `Make me a 3-day beginner plan`
-- `How do I perform a squat?`
-- `What exercises are good for my chest?`
-- `What should I eat for muscle gain?`
-- `I completed 3 sets of bench press today`
-- `I feel unmotivated`
-- `I have sharp knee pain`
-
-For `Make me a 3-day beginner dumbbell plan`, the system can identify:
-
-```text
-Intent: generate_plan
-Days: 3
-Experience level: beginner
-Equipment: dumbbells
-```
-
-## Safety and limitations
-
-- The chatbot provides general educational information only.
-- It does not diagnose pain, injuries, or medical conditions.
-- Users are advised to stop exercising when they experience sharp pain and consult a qualified professional.
-- The current exercise knowledge base is intentionally small and can be expanded.
-- Entity extraction is primarily rule-based, so unfamiliar wording may not be recognised.
-- Template responses improve predictability but limit conversational flexibility.
-- The local intent dataset and test set are limited, so additional data and human evaluation are needed before making stronger performance claims.
-- User profiles currently exist only in the active Streamlit session and are not persisted between runs.
-
-## Future improvements
-
-- Expand and rebalance the intent dataset.
-- Add more exercises, equipment types, and nutrition content.
-- Train or fine-tune a dedicated named entity recognition model.
-- Add richer retrieval with embeddings and semantic similarity.
-- Improve multi-turn dialogue and profile persistence.
-- Add macro-F1, confusion matrices, entity-level F1, and retrieval Recall@k reporting.
-- Conduct structured human evaluation for helpfulness, correctness, clarity, and safety.
-
-## Licence and source information
-
-The intent data source and attribution information are documented in `data/intent/SOURCES.md`. Check the terms of any external dataset or exercise data before redistributing the project.
+No intent paraphrase augmentation is currently used. SR Legacy is the primary
+nutrition lookup source, while FNDDS remains separate because the datasets use
+different descriptions and serving conventions. Raw source archives and
+generated model/data artifacts are excluded from Git. Dataset provenance is
+recorded in [data/SOURCES.md](data/SOURCES.md).
