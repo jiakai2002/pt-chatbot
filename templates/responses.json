@@ -1,0 +1,13 @@
+{
+  "general_chat": [
+    "You’re welcome! I’m here to help with your fitness goals.",
+    "Happy to help with your training."
+  ],
+  "out_of_scope": [
+    "I can help with fitness, exercise, nutrition facts, and workout logging. Please ask a fitness-related question."
+  ],
+  "log_feeling": [
+    "Thanks for checking in. Keep tracking how you feel, and take a rest day if you need one.",
+    "Got it. Recovery matters too—listen to how your body feels."
+  ]
+}

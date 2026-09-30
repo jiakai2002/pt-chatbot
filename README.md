@@ -82,13 +82,19 @@ Accuracy: 91.67%
 Macro-F1: 91.55%
 ```
 
-### Phase 3 - next
+### Phase 3 - completed
 
 - Knowledge-base retrieval.
 - Response templates and slot filling.
 - Workout planning.
 - End-to-end pipeline integration.
 - Streamlit interface.
+
+The Phase 3 pipeline is available with `streamlit run app.py`. It routes safety
+requests, classifies the message, extracts and inherits session slots, queries
+the local exercise/nutrition databases, and renders deterministic controlled
+responses. It continues to run with empty local datasets and reports a useful
+fallback instead of fabricating exercise or nutrition facts.
 
 ## Architecture
 
@@ -128,12 +134,19 @@ fitbuddy/
 │   ├── prepare_data.py
 │   ├── train_intent.py
 │   └── evaluate_intent.py
+├── templates/
+│   └── responses.json
 ├── src/
 │   ├── config.py
 │   ├── intent_classifier.py
 │   ├── entity_extractor.py
 │   ├── safety.py
-│   └── dialogue_manager.py
+│   ├── dialogue_manager.py
+│   ├── knowledge_base.py
+│   ├── planner.py
+│   ├── response_generator.py
+│   └── pipeline.py
+├── app.py
 ├── proposal.docx
 ├── proposal.md
 ├── project_guidelines.pdf
